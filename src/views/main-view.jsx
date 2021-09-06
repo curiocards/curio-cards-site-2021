@@ -84,11 +84,11 @@ class MainView extends React.Component {
           <meta property="og:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
           <meta property="og:type" content="website" />
 
-          <meta property="twitter:card" content="summary" />
-          <meta property="twitter:site" content="MyCurioCards" />
-          <meta property="twitter:title" content="Curio Cards" />
-          <meta property="twitter:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
-          <meta property="twitter:image" content="/icons/icon-512x512.png" />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="MyCurioCards" />
+          <meta name="twitter:title" content="Curio Cards" />
+          <meta name="twitter:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
+          <meta name="twitter:image" content="/icons/icon-512x512.png" />
 
         </Helmet>
 
