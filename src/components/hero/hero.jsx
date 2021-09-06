@@ -13,7 +13,7 @@ class Hero extends React.Component {
         <img src={logo} alt="" className="illo-logo" />
         <div className="centerpiece">
           <img src={cards} alt="" className="illo-cards" />
-          <h1>Oldest NFT art on Ethereum</h1>
+          <h1>First NFT art on Ethereum</h1>
           <a  href="https://opensea.io/collection/curiocardswrapper" target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">Buy &amp; Sell</a>
         </div>
         <footer>
