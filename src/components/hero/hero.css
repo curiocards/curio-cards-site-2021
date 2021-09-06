@@ -1,0 +1,106 @@
+/* Mobile */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 95vh;
+    padding-top: 24px;
+    box-sizing: border-box;
+    border: var(--border);
+}
+
+.centerpiece {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.illo-logo {
+    width: 100px;
+}
+
+h1 {
+    max-width: 85vw;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+}
+
+.button {
+    box-shadow: 4px 4px 0px var(--orange);
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    top: 0;
+    transition: 150ms ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--white);
+}
+.button:active {
+    top: 4px;
+    margin-bottom: 0;
+    box-shadow: 1px 1px 0px var(--orange);
+    transition: 150ms ease-in-out;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer__link {
+    text-align: center;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+
+    main {
+        width: 50vw;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    footer {
+        flex-direction: row;
+    }
+
+    .footer__link {
+        width: calc(50vw/3);
+    }
+
+    h1 {
+        max-width: 32vw;
+    }
+
+    .illo-logo {
+        width: 120px;
+    }
+}
+
+/* Magnum Desktop */
+@media only screen and (min-width: 2560px) {
+
+    h1 {
+        max-width: 32vw;
+    }
+
+    .illo-logo {
+        width: 180px;
+    }
+
+    .illo-cards {
+        width: 180px;
+    }
+
+    .button {
+        height: 64px;
+    }
+
+}

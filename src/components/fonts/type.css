@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,300&display=swap');
+
+/* ---MOBILE--- */
+
+/* Head */
+h1 {
+    font-family: Roboto Mono;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 10vw;
+    line-height: 140%;
+    text-align: center;
+    color: var(--orange);
+}
+
+/* Body */
+p, a, button, figcaption, select, input, figure, select {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+    h1 {
+        font-size: 4em;
+    }
+
+}
+
+/* Magnum Desktop */
+@media only screen and (min-width: 2560px) {
+    h1 {
+        font-size: 6em;
+    }
+    p, a, button, figcaption, select, input, figure, select {
+        font-size: 1em;
+    }
+}

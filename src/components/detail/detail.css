@@ -1,0 +1,130 @@
+main.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+    padding-bottom: 24px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    cursor: pointer;
+}
+
+.card-img-detail {
+    width: 280px;
+    display: none;
+}
+
+.description {
+    border: var(--border);
+    overflow-y: scroll;
+    padding: 8px;
+    line-height: 140%;
+    height: 20vh;
+    box-sizing:border-box;
+}
+
+.card-txt {
+
+    border-left: var(--border);
+}
+
+article {
+    max-width: 90vw;
+    width: 100%;
+}
+
+.pair-wrapper {
+    display: flex;
+}
+
+.pair-wrapper > * {
+    width: 50vw;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+
+    main.overlay {
+        width: 50vw;
+        height: calc(100vh - 42px);
+        position: fixed;
+    }
+
+    .pair-wrapper {
+        display: block;
+    }
+    
+    .pair-wrapper > * {
+        width: initial;
+    }
+    
+    .card-img-detail {
+        width: 100%;    
+        display: flex;
+    }
+
+    .card-img-detail:hover {
+        cursor: zoom-in;
+    }
+
+    .card-info {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .description {
+        height: calc(((4*(32vw / 2))/3) - 3*44px);
+        /*max-height: 100%;*/
+        border: none;
+        padding: 16px;
+        line-height: 150%;
+    }
+
+    article {
+        max-width: 32vw;
+        border: var(--border)
+    }
+
+    .description {
+        scrollbar-width: thin;
+        scrollbar-color: var(--orange) var(--white);
+    } 
+  
+    .description::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .description::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .description::-webkit-scrollbar-thumb {
+        background-color: var(--orange);
+        border-radius: 8px;
+        border: 1px var(--orangeLight) solid;
+    }
+}
+
+/* Magnum Desktop */
+@media only screen and (min-width: 2560px) {
+
+    main.overlay {
+        padding-bottom: 64px;
+        padding-top: 64px;
+    }
+
+    .artist-info {
+       height: calc(440px + 0.5vw);
+    }
+}

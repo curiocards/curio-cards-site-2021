@@ -1,0 +1,109 @@
+/* Vars */
+:root {
+    /* colors */
+    --black: #000000;
+    --white: #ffffff;
+    --orange:#F57040;
+    --orangeLight:#FFE9E1;
+    /* border */
+    --border: 1px solid var(--orange);
+  }
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    overflow: overlay;
+}
+
+input::placeholder {
+    opacity: 1;
+    font-family: Roboto Mono;
+    font-weight: 500;
+    color: var(--orange);
+}
+
+input:focus {
+    border: var(--border);
+    outline: none;
+}
+
+
+button,
+input,
+optgroup,
+select,figcaption,
+textarea,html input[type="button"],
+input[type="reset"],
+input[type="submit"],button[disabled],
+html input[disabled],button::-moz-focus-inner,
+input::-moz-focus-inner, input[type="checkbox"],
+input[type="radio"], input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button, input[type="search"], input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    background-image: none;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    border-color: none;
+    box-shadow: none;
+    font-family: Roboto Mono;
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 0;
+    font-variant: stacked-fractions;
+    color: var(--orange);
+    opacity: 1;
+    outline: 0;
+}
+
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* Utility Classes */
+
+.orangeLight {
+    background-color: var(--orangeLight);
+    color: var(--orange);
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.orange {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.border {
+    border: var(--border);
+}
+
+.cell {
+    height: 42px;
+    font-size: 1em;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Desktop & Above */
+@media only screen and (min-width: 1280px) {
+    .container {
+        flex-direction: row;
+    }
+}

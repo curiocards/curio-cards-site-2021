@@ -1,0 +1,160 @@
+/* Mobile */
+nav {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    width: 100vw;
+    filter: drop-shadow(0px 4px 10px rgba(245, 112, 64, 0.1));
+}
+
+.nav-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    background-color: var(--orangeLight);
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+    box-sizing: border-box;
+    border: var(--border);
+    /*overflow: hidden;*/
+}
+
+/* Dropdowns */
+.icon {
+    border: none;
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+}
+
+.dropdown {
+    width: 100%;
+    border: var(--border);
+    padding-left: 16px;
+    cursor: pointer;
+}
+  
+form {
+    display: flex;
+}
+
+.input__eth {
+    text-align: left;
+    padding-left: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.input__eth:disabled {
+    background-color: var(--orangeLight);
+    cursor: not-allowed;
+}
+
+input::placeholder {
+    opacity: 0.5;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    filter: drop-shadow(0px 8px 11px rgba(245, 112, 64, 0.1));
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,204px);
+    justify-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.pair-cell {
+    display: flex;
+}
+
+.pair-cell > * {
+    width: 100%;
+}
+
+select { 
+    text-align: left;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    font-size: 14px;
+    background: url("../../images/i-down.svg") right center no-repeat;
+  }
+
+
+.grayscale {
+    filter: grayscale(1)
+}
+
+.scale-down {
+    transform: scale(1);
+    transition: 250ms ease-in-out;
+}
+
+.card-overlay {
+    width: 100%;
+    height: calc(100% - 132px);
+    background-color: var(--orange);
+    position: absolute;
+    mix-blend-mode: screen;
+    display: none;
+    z-index: 10;
+}
+
+.selected {
+    display: block;
+}
+
+.hide-on-mobile {
+    display: none;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1280px) {
+
+    aside {
+        width: 50vw;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        width: 50vw;
+        height: 42px;
+    }
+
+    .nav-inner {
+        flex-direction: row;
+    }
+
+    .nav-inner > * {
+        width: calc(50vw/3);
+    }
+
+    .hide-on-mobile {
+        display: flex;
+    }
+
+}
+
+
+@media print {
+    nav {
+        display: none;
+    }
+}
