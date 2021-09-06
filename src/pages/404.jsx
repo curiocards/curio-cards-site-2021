@@ -24,9 +24,10 @@ const codeStyles = {
   borderRadius: 4,
 }
 
-// markup
+const browser = typeof window !== "undefined" && window;
+
 const NotFoundPage = () => {
-  return (
+  return browser && (
     <main style={pageStyles}>
       <title>Not found</title>
       <h1 style={headingStyles}>Page not found</h1>
