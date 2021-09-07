@@ -99,10 +99,12 @@ class Gallery extends React.Component {
         const erc1155Balances = await erc1155Promise;
 
         for (let i = 0; i < 30; i++) {
-          holdings[i+1] = parseInt(erc1155Balances[i]._hex, 16) + parseInt(erc20Balances[i], 10);
+          holdings[i+1] = {
+            "erc1155": parseInt(erc1155Balances[i]._hex, 16),
+            "erc20": parseInt(erc20Balances[i], 10)
+          };
         }
-        console.debug(`Curio balance for address ${address}: ${JSON.stringify(holdings)}`);
-
+        console.debug(`Curio balance for address ${address}:\n${JSON.stringify(holdings, null, 2)}`);
       } else {
         console.warn(`Invalid ethereum address! (${address})`);
       }
@@ -112,7 +114,8 @@ class Gallery extends React.Component {
     if (holdings && Object.keys(holdings).length > 0) {
       for (let i = 0; i < cards.length; i++) {
         if (cards[i].number in holdings) {
-          cards[i].supply = holdings[cards[i].number];
+          cards[i].supply = holdings[cards[i].number].erc1155 + holdings[cards[i].number].erc20;
+          cards[i].holdings = holdings[cards[i].number];
         } else {
           cards[i].supply = 0;
         }
@@ -123,7 +126,6 @@ class Gallery extends React.Component {
       cards: cards,
       loading: false,
     });
-
   }
 
   render() {
@@ -156,18 +158,40 @@ class Gallery extends React.Component {
     if (this.state.loading) {
       gallery = <p>Loading...</p>;
     } else if (cards.find(card => card.supply > 0)) {
-      gallery = cards.map(card => card.supply > 0 ? (
-        <figure className={`card border ${card.number === Number(this.props.selectedCardNumber) ? "scale-down" : ""}`} onClick={this.handleCardClick} key={card.number} id={card.number}>
-          <div className={`card-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
-          <img src={cardImages[card.number]} alt="" className={`card-img ${card.number === this.props.selectedCardNumber ? "grayscale" : ""}`} />
-          <figcaption className="card-title cell orange center border">{card.title}</figcaption>
-          <p className="card-artist cell white center border">By {card.artist}</p>
-          <div className="pair-cell">
-            <p className="card-price cell orangeLight center border"> Supply</p>
-            <p className="card-supply cell orange center border">x{card.supply}</p>
-          </div>
-        </figure>
-      ) : null);
+      gallery = cards.map(card => {
+        if (card.holdings != null) {
+          // handle as user balance
+          if (card.holdings.erc20 > 0 || card.holdings.erc1155 > 0) {
+            return <figure className={`card border ${card.number === Number(this.props.selectedCardNumber) ? "scale-down" : ""}`} onClick={this.handleCardClick} key={card.number} id={card.number}>
+                <div className={`card-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
+                <img src={cardImages[card.number]} alt="" className={`card-img ${card.number === this.props.selectedCardNumber ? "grayscale" : ""}`} />
+                <figcaption className="card-title cell orange center border">{card.title}</figcaption>
+                <p className="card-artist cell white center border">By {card.artist}</p>
+                <div className="pair-cell">
+                  <p className="card-price cell orangeLight center border">unwrap: {card.holdings.erc20}</p>
+                  <p className="card-supply cell orange center border">wrap: {card.holdings.erc1155}</p>
+                </div>
+              </figure>;
+          } else {
+            return null;
+          }
+        } else if (card.supply > 0) {
+          // handle as general card display
+          return <figure className={`card border ${card.number === Number(this.props.selectedCardNumber) ? "scale-down" : ""}`} onClick={this.handleCardClick} key={card.number} id={card.number}>
+              <div className={`card-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
+              <img src={cardImages[card.number]} alt="" className={`card-img ${card.number === this.props.selectedCardNumber ? "grayscale" : ""}`} />
+              <figcaption className="card-title cell orange center border">{card.title}</figcaption>
+              <p className="card-artist cell white center border">By {card.artist}</p>
+              <div className="pair-cell">
+                <p className="card-price cell orangeLight center border">Supply</p>
+                <p className="card-supply cell orange center border">x{card.supply}</p>
+              </div>
+            </figure>;
+        } else {
+          // not ready yet
+          return null;
+        }
+      });
     } else {
       gallery = <p>No cards for address {this.state.selectedAddress}.</p>;
     }

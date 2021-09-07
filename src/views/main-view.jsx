@@ -79,7 +79,7 @@ class MainView extends React.Component {
           <meta name="description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
 
           <meta property="og:title" content="Curio Cards" />
-          <meta property="og:image" content="/icons/icon-512x512.png" />
+          <meta property="og:image" content="https://curio.cards/icons/icon-512x512.png" />
           <meta property="og:url" content="https://curio.cards" />
           <meta property="og:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
           <meta property="og:type" content="website" />
