@@ -27,6 +27,7 @@ class Gallery extends React.Component {
       selectedAddress: props.selectedAddress,
       provider: provider,
       loading: true,
+      invalidAddress: false
     };
 
     this.handleAddressSubmit = this.handleAddressSubmit.bind(this);
@@ -82,7 +83,7 @@ class Gallery extends React.Component {
   }
 
   async updateCards(address) {
-    this.setState({loading: true});
+    this.setState({loading: true, invalidAddress: false});
     let cards = _.cloneDeep(this.props.cards);
 
     let holdings = null;
@@ -107,6 +108,7 @@ class Gallery extends React.Component {
         console.debug(`Curio balance for address ${address}:\n${JSON.stringify(holdings, null, 2)}`);
       } else {
         console.warn(`Invalid ethereum address! (${address})`);
+        this.setState({invalidAddress: true})
       }
     }
 
@@ -157,6 +159,8 @@ class Gallery extends React.Component {
     let gallery = null;
     if (this.state.loading) {
       gallery = <p>Loading...</p>;
+    } else if (this.state.invalidAddress) {
+      gallery = <p>Invalid address provided</p>;
     } else if (cards.find(card => card.supply > 0)) {
       gallery = cards.map(card => {
         if (card.holdings != null) {
@@ -197,7 +201,7 @@ class Gallery extends React.Component {
     }
 
     let leaderboardMessage = null;
-    if (this.state.selectedAddress && !this.state.loading) {
+    if (this.state.selectedAddress && !this.state.loading && !this.state.invalidAddress) {
       leaderboardMessage = <div className="orangeLight center pair-cell hide-on-mobile">
         <p className="orangeLight center cell border">Curious who has most cards?</p>
         <a target="_blank" rel="noopener noreferrer" className="orange center cell border" href="https://leaderboard.curio.cards/"> <p>See the Leaderboard!</p></a>
