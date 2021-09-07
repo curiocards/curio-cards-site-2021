@@ -48,7 +48,7 @@ class Gallery extends React.Component {
     } else {
       const addr = document.getElementById("address-input").value;
       if (addr) {
-        navigate(`/address/${addr}`);
+        navigate(`/?address=${addr}`);
         this.updateCards(addr);
       } else {
         navigate("/");
