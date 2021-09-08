@@ -133,6 +133,10 @@ select {
     text-decoration: underline;
 }
 
+.warning-message {
+    text-align: center;
+}
+
 /* Desktop */
 @media only screen and (min-width: 1280px) {
 
@@ -157,6 +161,10 @@ select {
 
     .hide-on-mobile {
         display: flex;
+    }
+
+    .warning-message {
+        margin-top: 2em;
     }
 
 }

@@ -27,7 +27,6 @@ class Gallery extends React.Component {
       selectedAddress: props.selectedAddress,
       provider: provider,
       loading: true,
-      invalidAddress: false
     };
 
     this.handleAddressSubmit = this.handleAddressSubmit.bind(this);
@@ -82,38 +81,33 @@ class Gallery extends React.Component {
     return await contract.balanceOfBatch(addrArray, idArray);
   }
 
-  async updateCards(address) {
-    this.setState({loading: true, invalidAddress: false});
+  async updateCards(inputAddress) {
+    this.setState({loading: true});
+
     let cards = _.cloneDeep(this.props.cards);
+    let holdings = {};
 
-    let holdings = null;
-    if (address) {
-      if (address.match(/^0x[a-fA-F0-9]{40}$/)) {
-        holdings = {};
+    if (inputAddress) {
+      // Fetch holdings for address
+      let erc20Promises = [];
+      for (let i = 1; i < 31; i++)
+        erc20Promises.push(this.getErc20Balance(inputAddress, i));
+      const erc1155Promise = this.getErc1155BalanceBatch(inputAddress);
 
-        let erc20Promises = [];
-        for (let i = 1; i < 31; i++)
-          erc20Promises.push(this.getErc20Balance(address, i));
-        const erc1155Promise = this.getErc1155BalanceBatch(address);
+      const erc20Balances = await Promise.all(erc20Promises);
+      const erc1155Balances = await erc1155Promise;
 
-        const erc20Balances = await Promise.all(erc20Promises);
-        const erc1155Balances = await erc1155Promise;
-
-        for (let i = 0; i < 30; i++) {
-          holdings[i+1] = {
-            "erc1155": parseInt(erc1155Balances[i]._hex, 16),
-            "erc20": parseInt(erc20Balances[i], 10)
-          };
-        }
-        console.debug(`Curio balance for address ${address}:\n${JSON.stringify(holdings, null, 2)}`);
-      } else {
-        console.warn(`Invalid ethereum address! (${address})`);
-        this.setState({invalidAddress: true})
+      for (let i = 0; i < 30; i++) {
+        holdings[i+1] = {
+          "erc1155": parseInt(erc1155Balances[i]._hex, 16),
+          "erc20": parseInt(erc20Balances[i], 10)
+        };
       }
+      console.debug(`Curio balance for address ${inputAddress}:\n${JSON.stringify(holdings, null, 2)}`);
     }
 
-    // If an address was defined, set the holdings to this address's supply
-    if (holdings && Object.keys(holdings).length > 0) {
+    // If an address was provided, set the holdings to this address's supply
+    if (inputAddress && Object.keys(holdings).length > 0) {
       for (let i = 0; i < cards.length; i++) {
         if (cards[i].number in holdings) {
           cards[i].supply = holdings[cards[i].number].erc1155 + holdings[cards[i].number].erc20;
@@ -158,9 +152,7 @@ class Gallery extends React.Component {
 
     let gallery = null;
     if (this.state.loading) {
-      gallery = <p>Loading...</p>;
-    } else if (this.state.invalidAddress) {
-      gallery = <p>Invalid address provided</p>;
+      gallery = <p class="warning-message">Loading...</p>;
     } else if (cards.find(card => card.supply > 0)) {
       gallery = cards.map(card => {
         if (card.holdings != null) {
@@ -172,8 +164,8 @@ class Gallery extends React.Component {
                 <figcaption className="card-title cell orange center border">{card.title}</figcaption>
                 <p className="card-artist cell white center border">By {card.artist}</p>
                 <div className="pair-cell">
-                  <p className="card-price cell orangeLight center border">x{card.holdings.erc20}</p>
-                  <p className="card-supply cell orange center border">x{card.holdings.erc1155}</p>
+                  <p className="card-price cell orangeLight center border" title="Unwrapped card supply">x{card.holdings.erc20}</p>
+                  <p className="card-supply cell orange center border" title="Wrapped card supply">x{card.holdings.erc1155}</p>
                 </div>
               </figure>;
           } else {
@@ -197,11 +189,11 @@ class Gallery extends React.Component {
         }
       });
     } else {
-      gallery = <p>No cards for address {this.state.selectedAddress}.</p>;
+      gallery = <p class="warning-message">{`No cards for address ${this.state.selectedAddress}.`}</p>;
     }
 
     let leaderboardMessage = null;
-    if (this.state.selectedAddress && !this.state.loading && !this.state.invalidAddress) {
+    if (this.state.selectedAddress && !this.state.loading) {
       leaderboardMessage = <div className="orangeLight center pair-cell hide-on-mobile">
         <p className="orangeLight center cell border">Curious who has most cards?&#160;<a target="_blank" rel="noopener noreferrer" className="orangeLight underline center cell" href="https://leaderboard.curio.cards/"> See the Leaderboard</a></p>
         
