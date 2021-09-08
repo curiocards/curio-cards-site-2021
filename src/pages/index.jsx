@@ -31,7 +31,6 @@ export const query = graphql`
         supply
         artist
         description
-        buyLink
       }
     }
     allArtists: allArtistsJson {

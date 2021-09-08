@@ -172,8 +172,8 @@ class Gallery extends React.Component {
                 <figcaption className="card-title cell orange center border">{card.title}</figcaption>
                 <p className="card-artist cell white center border">By {card.artist}</p>
                 <div className="pair-cell">
-                  <p className="card-price cell orangeLight center border">unwrap: {card.holdings.erc20}</p>
-                  <p className="card-supply cell orange center border">wrap: {card.holdings.erc1155}</p>
+                  <p className="card-price cell orangeLight center border">x{card.holdings.erc20}</p>
+                  <p className="card-supply cell orange center border">x{card.holdings.erc1155}</p>
                 </div>
               </figure>;
           } else {
@@ -203,8 +203,8 @@ class Gallery extends React.Component {
     let leaderboardMessage = null;
     if (this.state.selectedAddress && !this.state.loading && !this.state.invalidAddress) {
       leaderboardMessage = <div className="orangeLight center pair-cell hide-on-mobile">
-        <p className="orangeLight center cell border">Curious who has most cards?</p>
-        <a target="_blank" rel="noopener noreferrer" className="orange center cell border" href="https://leaderboard.curio.cards/"> <p>See the Leaderboard!</p></a>
+        <p className="orangeLight center cell border">Curious who has most cards?&#160;<a target="_blank" rel="noopener noreferrer" className="orangeLight underline center cell" href="https://leaderboard.curio.cards/"> See the Leaderboard</a></p>
+        
       </div>;
     }
 

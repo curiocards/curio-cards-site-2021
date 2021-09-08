@@ -87,7 +87,7 @@ figcaption {
 
 .cell {
     height: 42px;
-    font-size: 1em;
+    /* font-size: 1em; */
 }
 
 .center {
@@ -100,6 +100,27 @@ figcaption {
     display: flex;
     flex-direction: column;
 }
+
+.on-hover-orange:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    transition: 100ms ease-in-out;
+}
+
+
+.on-hover-light:hover {
+    background-color: var(--orangeLight);
+    color: var(--orange);
+    transition: 100ms ease-in-out;
+}
+
+
+.on-hover-white:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    transition: 100ms ease-in-out;
+}
+
 
 /* Desktop & Above */
 @media only screen and (min-width: 1280px) {

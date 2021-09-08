@@ -4,238 +4,208 @@
         "number": 1,
         "supply": 1809,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/1"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Nuts",
         "number": 2,
         "supply": 1630,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Berries",
         "number": 3,
         "supply": 1584,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Clay",
         "number": 4,
         "supply": 460,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Paint",
         "number": 5,
         "supply": 438,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Ink",
         "number": 6,
         "supply": 438,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Sculpture",
         "number":7,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Painting",
         "number": 8,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Book",
         "number": 9,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "Future",
         "number": 10,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
-        "buyLink":"google.com"
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
     },
     {
         "title": "BTC Keys",
         "number":11,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti",
-        "buyLink":"google.com"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti"
     },
     {
         "title": "Mine Bitcoin",
         "number": 12,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti",
-        "buyLink":"google.com"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti"
     },
     {
         "title": "BTC",
         "number": 13,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti",
-        "buyLink":"google.com"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement. — Cryptograffiti"
     },
     {
         "title": "CryptoCurrency",
         "number": 14,
         "supply": 500,
-        "artist": "Cryptograffiti",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
-        "buyLink":"google.com"
+        "artist": "Phneep",
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
     },{
         "title": "DigitalCash",
         "number": 15,
         "supply": 500,
-        "artist": "Cryptograffiti",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
-        "buyLink":"google.com"
+        "artist": "Phneep",
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
     },
     {
         "title": "OriginalCoin",
         "number": 16,
         "supply": 500,
-        "artist": "Cryptograffiti",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
-        "buyLink":"google.com"
+        "artist": "Phneep",
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
     },
     {
         "title": "UASF",
         "number":17,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "To The Moon",
         "number": 18,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "Dogs Trading",
         "number": 19,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "MadBitcoins",
         "number": 20,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "The Wizard",
         "number": 21,
         "supply": 500,
         "artist": "Robek World",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "The Bard",
         "number": 22,
         "supply": 500,
         "artist": "Robek World",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "The Barbarian",
         "number": 23,
         "supply": 250,
         "artist": "Robek World",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "Complexity",
         "number": 24,
         "supply": 333,
         "artist": "Daniel Friedman",
-        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman",
-        "buyLink":"google.com"
+        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman"
     },
     {
         "title": "Passion",
         "number": 25,
         "supply": 222,
         "artist": "Daniel Friedman",
-        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman",
-        "buyLink":"google.com"
+        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman"
     },
     {
         "title": "Education",
         "number": 26,
         "supply": 111,
         "artist": "Daniel Friedman",
-        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman",
-        "buyLink":"google.com"
+        "description": "Inspired by brains, ant colonies, and other complex systems, my art explores how global patterns arise via local relationships. The production of a drawing for me is actually not unlike the mining of a blockchain: an intricate process that can be laborious to perform perfectly, but with an intrinsic coherence that is self-evident after completion. Now with the creation of Curio Cards, the metaphorical mapping between cryptocurrencies and my art is meaningfully strengthened. Indeed now more than ever we are seeing the fusion of art with technology and science, reminding me of a favorite quotation by Goethe: '...science arose from poetry, and when times change the two can meet again on a higher level as friends....'.  — Daniel Friedman"
     },
     {
         "title": "Blue",
         "number": 27,
         "supply": 600,
         "artist": "Marisol Vengas",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "Pink",
         "number": 28,
         "supply": 400,
         "artist": "Marisol Vengas",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "Yellow",
         "number": 29,
         "supply": 200,
         "artist": "Marisol Vengas",
-        "description": "",
-        "buyLink":"google.com"
+        "description": ""
     },
     {
         "title": "Eclipse",
         "number": 30,
         "supply": 821,
         "artist": "Thoros of Myr",
-        "description": " North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr.",
-        "buyLink":"google.com"
+        "description": " North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr."
     }
 ]

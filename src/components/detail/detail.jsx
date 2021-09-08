@@ -28,6 +28,13 @@ class Detail extends React.Component {
         </a>;
     }
 
+    let biography = currentArtist.biography;
+    if (biography && biography.startsWith("https://www.youtube.com")) {
+      biography = <p className="description white youtube-video-container"><iframe className="youtube-video" src="https://www.youtube-nocookie.com/embed/SZagM-shBMU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe></p>
+    } else {
+      biography = <p className="description white">{biography}</p>
+    }
+
     return (
       <main className="overlay">
         <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="" /> </button>
@@ -52,10 +59,10 @@ class Detail extends React.Component {
               {artistTwitter}
               {artistWebsite}
             </div>
-            <p className="description white">{currentArtist.biography}</p>
+            {biography}
           </div>
         </article>
-        <a href={`https://${this.props.card.buyLink}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
+        <a href={`https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
           {`Buy ${this.props.card.title}`}
         </a>
       </main>
