@@ -90,7 +90,7 @@ footer {
 
     .illo-curio {
         position: absolute;
-        bottom: -100px;
+        bottom: -10px;
         max-height: 15vh;
         margin-left: 1vw;
         display: block;
@@ -99,7 +99,7 @@ footer {
     }
 
     .footer__link:hover .illo-curio {
-        bottom: -20px;
+        bottom: 42px;
         transition: 250ms ease-in-out;
     }
 }
