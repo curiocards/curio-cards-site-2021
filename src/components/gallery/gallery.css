@@ -111,9 +111,19 @@ select {
     transition: 250ms ease-in-out;
 }
 
+.card-eth-overlay {
+    width: 100%;
+    height: calc(100% - 88px);
+    background-color: var(--orange);
+    position: absolute;
+    mix-blend-mode: screen;
+    display: none;
+    z-index: 10;
+}
+
 .card-overlay {
     width: 100%;
-    height: calc(100% - 132px);
+    height: calc(100%);
     background-color: var(--orange);
     position: absolute;
     mix-blend-mode: screen;
@@ -135,6 +145,10 @@ select {
 
 .warning-message {
     text-align: center;
+}
+
+.card-supply {
+    width: 72px;
 }
 
 /* Desktop */

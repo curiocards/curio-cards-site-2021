@@ -6,6 +6,7 @@ import "./detail.css"
 import "../fonts/type.css"
 
 import close from "../../images/i-close.svg"
+import opensea from "../../images/opensea-transparent-blue.svg"
 import { cardImages } from "../constants.jsx";
 
 class Detail extends React.Component {
@@ -37,7 +38,7 @@ class Detail extends React.Component {
 
     return (
       <main className="overlay">
-        <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="" /> </button>
+        <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="Close card" /> </button>
         <article className="card-info">
           <img src={cardImages[this.props.card.number]} alt="" className="card-img-detail" />
           <div className="card-txt">
@@ -63,6 +64,7 @@ class Detail extends React.Component {
           </div>
         </article>
         <a href={`https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
+          {/* <img src={opensea} alt="Opensea" className="opensea-icon button-icon" /> */}
           {`Buy ${this.props.card.title}`}
         </a>
       </main>

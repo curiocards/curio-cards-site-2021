@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby"
-import { ethers } from "ethers";
+import { ethers } from "ethers"
 
 import "../global.css";
 import "../reset.css";
@@ -181,13 +181,17 @@ class Gallery extends React.Component {
           // handle as user balance
           if (card.holdings.erc20 > 0 || card.holdings.erc1155 > 0) {
             return <figure className={`card border ${card.number === Number(this.props.selectedCardNumber) ? "scale-down" : ""}`} onClick={this.handleCardClick} key={card.number} id={card.number}>
-                <div className={`card-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
+                <div className={`card-eth-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
                 <img src={cardImages[card.number]} alt="" className={`card-img ${card.number === this.props.selectedCardNumber ? "grayscale" : ""}`} />
-                <figcaption className="card-title cell orange center border">{card.title}</figcaption>
-                <p className="card-artist cell white center border">By {card.artist}</p>
+                {/* <figcaption className="card-title cell orange center border">{card.title}</figcaption> */}
+                {/* <p className="card-artist cell white center border">By {card.artist}</p> */}
                 <div className="pair-cell">
-                  <p className="card-price cell orangeLight center border" title="Unwrapped card supply">x{card.holdings.erc20}</p>
+                  <p className="card-price cell orangeLight center border" title="Wrapped">Wrapped</p>
                   <p className="card-supply cell orange center border" title="Wrapped card supply">x{card.holdings.erc1155}</p>
+                </div>
+                <div className="pair-cell">
+                  <p className="card-price cell orangeLight center border" title="Unwrapped">Unwrapped</p>
+                  <p className="card-supply cell orangeLight center border" title="Unwrapped card supply">x{card.holdings.erc20}</p>
                 </div>
               </figure>;
           } else {
@@ -198,12 +202,12 @@ class Gallery extends React.Component {
           return <figure className={`card border ${card.number === Number(this.props.selectedCardNumber) ? "scale-down" : ""}`} onClick={this.handleCardClick} key={card.number} id={card.number}>
               <div className={`card-overlay ${card.number === Number(this.props.selectedCardNumber) ? "selected" : ""}`}></div>
               <img src={cardImages[card.number]} alt="" className={`card-img ${card.number === this.props.selectedCardNumber ? "grayscale" : ""}`} />
-              <figcaption className="card-title cell orange center border">{card.title}</figcaption>
+              {/* <figcaption className="card-title cell orange center border">{card.title}</figcaption>
               <p className="card-artist cell white center border">By {card.artist}</p>
               <div className="pair-cell">
                 <p className="card-price cell orangeLight center border">Supply</p>
                 <p className="card-supply cell orange center border">x{card.supply}</p>
-              </div>
+              </div> */}
             </figure>;
         } else {
           // not ready yet
@@ -242,9 +246,9 @@ class Gallery extends React.Component {
                 placeholder="Address or ENS Lookup" defaultValue={formattedAddress} disabled={!!this.state.selectedAddress} />
               {
                 !!this.state.selectedAddress ?
-                  <button className="icon dropdown__icon cell orange"> <img src={close} alt="" /> </button>
+                  <button className="icon dropdown__icon cell orange"> <img src={close} alt="Close address" /> </button>
                 :
-                  <button className="icon dropdown__icon cell orange"> <img src={search} alt="" /> </button>
+                  <button className="icon dropdown__icon cell orange"> <img src={search} alt="Search for address" /> </button>
               }
             </form>
 

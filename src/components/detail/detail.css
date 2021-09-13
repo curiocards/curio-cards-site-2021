@@ -68,6 +68,28 @@ p.description.youtube-video-container {
     width: 100%;
 }
 
+.button-icon {
+    max-width: 16px;
+    max-height: 16px;
+    margin-right: 0.75em;
+}
+
+.opensea-icon {
+    filter: hue-rotate(150deg) brightness(1.06);
+}
+
+.discord-icon {
+    filter: hue-rotate(150deg) brightness(100);
+}
+
+.twitter-icon {
+    filter: hue-rotate(155deg) brightness(1);
+}
+
+.footer__link:hover .discord-icon {
+    filter: hue-rotate(140deg) brightness(1.2);
+}
+
 /* Desktop */
 @media only screen and (min-width: 1280px) {
 

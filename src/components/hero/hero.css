@@ -57,6 +57,10 @@ footer {
     text-align: center;
 }
 
+.illo-curio {
+    display: none;
+}
+
 /* Desktop */
 @media only screen and (min-width: 1280px) {
 
@@ -69,6 +73,7 @@ footer {
 
     footer {
         flex-direction: row;
+        outline: var(--border); /*Fixes Curio Peek Border Bug*/
     }
 
     .footer__link {
@@ -81,6 +86,21 @@ footer {
 
     .illo-logo {
         width: 120px;
+    }
+
+    .illo-curio {
+        position: absolute;
+        bottom: -100px;
+        max-height: 15vh;
+        margin-left: 1vw;
+        display: block;
+        z-index: -1;
+        transition: 250ms ease-in-out;
+    }
+
+    .footer__link:hover .illo-curio {
+        bottom: -20px;
+        transition: 250ms ease-in-out;
     }
 }
 
