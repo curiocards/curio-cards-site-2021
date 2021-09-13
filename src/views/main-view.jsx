@@ -2,9 +2,9 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
 
-import Hero  from "../components/hero/hero"
-import Gallery  from "../components/gallery/gallery"
-import Detail  from "../components/detail/detail"
+import Hero from "../components/hero/hero"
+import Gallery from "../components/gallery/gallery"
+import Detail from "../components/detail/detail"
 
 class MainView extends React.Component {
   constructor(props) {
@@ -58,7 +58,35 @@ class MainView extends React.Component {
   }
 
   setArtistFilterCallback(val) {
-    this.setState({artistFilter: val});
+    // if a card is selected, set state.
+    // if a card is not selected, modify URL instead
+    console.log("val: " + val);
+    console.log("all artists: " + this.props.allArtists)
+    if (!this.state.selectedCardNumber) {
+      console.log("no card selected, navigating")
+
+      if (val == "All Artists") {
+        navigate(`/`,
+          {
+            state: {
+              artistFilter: "All Artists",
+              sort: this.state.sort
+            }
+          });
+      } else {
+        const id = this.props.allArtists.nodes.find(x => x.name == val).id;
+        navigate(`/artist/${id}`,
+          {
+            state: {
+              sort: this.state.sort
+            }
+          });
+      }
+    } else {
+      console.log("card " + this.state.selectedCardNumber + " selected, setting state")
+      this.setState({artistFilter: val});
+    }
+
   }
 
   setSortCallback(val) {
