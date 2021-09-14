@@ -19,8 +19,7 @@ class Gallery extends React.Component {
     super(props);
 
     const provider = new ethers.providers.InfuraProvider("homestead", {
-      projectId: "0fcdb79aa8cf43dabf8f61a492f63a00",
-      //projectSecret: "eb3062f9f0644f4e97c299649ed3b43d"
+      projectId: "8ce4ac4e12ce4034ba6cc1266b23c8d4",
     });
 
     this.state = {
