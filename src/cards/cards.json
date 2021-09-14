@@ -116,21 +116,21 @@
         "number": 17,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "UASF"
+        "description": "Ready to dip our toes in to the waters of the Bitcoin's first user-activated soft fork."
     },
     {
         "title": "To The Moon",
         "number": 18,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "To The Moon"
+        "description": "In retrospect, dog coins on the moon were inevitable."
     },
     {
         "title": "Dogs Trading",
         "number": 19,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "Dogs Trading"
+        "description": "Parody of a parody: these dogs have been shillin' and chillin' since 1903."
     },
     {
         "title": "MadBitcoins",
@@ -186,21 +186,21 @@
         "number": 27,
         "supply": 600,
         "artist": "Marisol Vengas",
-        "description": "Blue"
+        "description": "We Are All Marisol Vengas."
     },
     {
         "title": "Pink",
         "number": 28,
         "supply": 400,
         "artist": "Marisol Vengas",
-        "description": "Pink"
+        "description": "Marisol Vengas is Hot."
     },
     {
         "title": "Yellow",
         "number": 29,
         "supply": 200,
         "artist": "Marisol Vengas",
-        "description": "Yellow"
+        "description": "Marisol Vengas is From The Future."
     },
     {
         "title": "Eclipse",

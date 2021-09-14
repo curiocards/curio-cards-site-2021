@@ -1,6 +1,7 @@
 import React from "react";
 import { navigate } from "gatsby"
 import { ethers } from "ethers"
+import Fade from 'react-reveal/Fade';
 
 import "../global.css";
 import "../reset.css";

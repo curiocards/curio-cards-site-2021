@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
+import Fade from 'react-reveal/Fade';
 
 import Hero  from "../components/hero/hero"
 import Gallery  from "../components/gallery/gallery"
@@ -93,12 +94,10 @@ class MainView extends React.Component {
         </Helmet>
 
         <Hero />
-
         <Gallery cards={this.props.allCards.nodes} selectedCardNumber={this.state.selectedCardNumber} selectedAddress={this.props.selectedAddress}
           artistFilter={this.state.artistFilter} sort={this.state.sort}
           selectCardCallback={this.selectCardCallback} deselectCardCallback={this.deselectCardCallback}
           setArtistFilterCallback={this.setArtistFilterCallback} setSortCallback={this.setSortCallback} />
-
         <Detail card={selectedCard} artists={this.props.allArtists.nodes} deselectCardCallback={this.deselectCardCallback} />
       </div>
     );
