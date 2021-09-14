@@ -19,13 +19,13 @@ class Detail extends React.Component {
     let artistTwitter = null, artistWebsite = null;
     if (currentArtist.twitter) {
       artistTwitter = <a target="_blank" href={`https://twitter.com/${currentArtist.twitter}`}>
-          <p className="cell orangeLight center border">{`@${currentArtist.twitter}`}</p>
+          <p className="cell orangeLight on-hover-white center border">{`@${currentArtist.twitter}`}</p>
         </a>;
     }
 
     if (currentArtist.website) {
       artistWebsite = <a target="_blank" href={`https://${currentArtist.website}`}>
-          <p className="cell orangeLight center border">{currentArtist.website}</p>
+          <p className="cell orangeLight on-hover-white center border">{currentArtist.website}</p>
         </a>;
     }
 
@@ -44,15 +44,19 @@ class Detail extends React.Component {
           <div className="card-txt">
             <div className="pair-wrapper">
               <p className="cell orange center border">{this.props.card.title}</p>
-              <p className="cell white center border">By {this.props.card.artist}</p>
+              <p className="cell orangeLight center border">By {this.props.card.artist}</p>
             </div>
             <div className="pair-cell">
-              <p className="cell orangeLight center border"> Supply</p>
-              <p className="cell orange center border">x{this.props.card.supply}</p>
+              <p className="cell white center border"> Supply</p>
+              <p className="cell white center border">x{this.props.card.supply}</p>
             </div>
             <p className="description white">{this.props.card.description}</p>
           </div>
         </article>
+        <a href={`https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
+          {/* <img src={opensea} alt="Opensea" className="opensea-icon button-icon" /> */}
+          {`Buy ${this.props.card.title}`}
+        </a>
         <article className="artist-info">
           <div className="artist-txt">
             <p className="cell orange center border">About {this.props.card.artist}</p>
@@ -63,10 +67,7 @@ class Detail extends React.Component {
             {biography}
           </div>
         </article>
-        <a href={`https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
-          {/* <img src={opensea} alt="Opensea" className="opensea-icon button-icon" /> */}
-          {`Buy ${this.props.card.title}`}
-        </a>
+
       </main>
     );
   }
