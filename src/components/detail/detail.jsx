@@ -40,7 +40,9 @@ class Detail extends React.Component {
       <main className="overlay">
         <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="Close card" /> </button>
         <article className="card-info">
-          <img src={cardImages[this.props.card.number]} alt="" className="card-img-detail" />
+          <a href={`https://gateway.ipfs.io/ipfs/${this.props.card.ipfs_image}`} target="_blank">
+            <img src={cardImages[this.props.card.number]} alt={`${this.props.card.title} card`} className="card-img-detail" />
+          </a>
           <div className="card-txt">
             <div className="pair-wrapper">
               <p className="cell orange center border">{this.props.card.title}</p>

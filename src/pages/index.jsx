@@ -31,6 +31,8 @@ export const query = graphql`
         supply
         artist
         description
+        ipfs_metadata
+        ipfs_image
       }
     }
     allArtists: allArtistsJson {

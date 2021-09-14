@@ -4,209 +4,269 @@
         "number": 1,
         "supply": 1809,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmWHUnrdfA4w89TeepZqrvygbaF9wV48k97Wf27skL5cry",
+        "ipfs_image": "QmZGrL7HrUmkLuUxp7NV4n1H8tHkurmBAdsx8jzJp4v1tn"
     },
     {
         "title": "Nuts",
         "number": 2,
         "supply": 1630,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmVJn6B289Xt3cq9evzubdyk4f1usPAu277SmUusmdYYWU",
+        "ipfs_image": "QmR1PfBWWNwku1Ywshyn3iwhM5oVMm9rvgPj1EFUd34ZzY"
     },
     {
         "title": "Berries",
         "number": 3,
         "supply": 1584,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmWBb6T4nviPWdAyqGJTki7VA6fpTmcYP37U9jpYAfhzPP",
+        "ipfs_image": "QmZ74F1trdUaKksS2YkScXxD7zDkSrrmnMX6wTusAXYeYz"
     },
     {
         "title": "Clay",
         "number": 4,
         "supply": 460,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "Qmbcw8ix8xdK1reFpDEjKtk9EWuRwrbMKqvEvWkttNzXkH",
+        "ipfs_image": "QmdZ8JZZAWfWcLRnXvccBdXTJ6KwiaHMU8wEB1tRcYRK9E"
     },
     {
         "title": "Paint",
         "number": 5,
         "supply": 438,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmXmj9YdsvBVddzC352Xsh7bmyJtfZvbVJeetK7PXW21p8",
+        "ipfs_image": "QmQX4o64AoNhBdvsn77rYLNaeHsiY62Cqschoqok3ebAim"
     },
     {
         "title": "Ink",
         "number": 6,
         "supply": 438,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "Qmdf16YMPM7zG5QkSYB4HjbxQPaStYazsL6d1npdJG8J7h",
+        "ipfs_image": "QmNQJq8zLphvPmGbcKopUqioFF1tED3ykPdQjR7KXCQxVn"
     },
     {
         "title": "Sculpture",
         "number":7,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmUGmWwrNR7JKBCSu3CkGnTYSFat7y2AiUzACcbAoZcj2d",
+        "ipfs_image": "QmRexYVZTDq5pnqukVia99jPUv19M9RRg53B87aueFfLYD"
     },
     {
         "title": "Painting",
         "number": 8,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmXQfBgJRsUQbf8UkViATdpsySXzREsifegWzLvw5QsQPj",
+        "ipfs_image": "QmT1qiYcVQuR4Zqqkdj3auDBULhDqstxqMBZRLCm67G19J"
     },
     {
         "title": "Book",
         "number": 9,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "Qmctv89ppbYTuwCWVFA9waVCeE8g6YM3Ah54bZW1WGmEHh",
+        "ipfs_image": "QmWSGCGTt5tJUquaTmi2cezM5VfDju3LPhRqQKKJbmSNzL"
     },
     {
         "title": "Future",
         "number": 10,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down."
+        "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
+        "ipfs_metadata": "QmaSBVrCcBsYHjVuvTsj6ev4Pua7NYX7sDNzdAYwCdAAne",
+        "ipfs_image": "QmZUUXdi4cWsJVKLBYW4SyFz6rj4Ftp5SDU9CQLny9crnD"
     },
     {
         "title": "BTC Keys",
         "number":11,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti",
+        "ipfs_metadata": "QmZjSs71uBYYdLx5Ju443KiSYjxQcJQLL5ZnhuzWX6nC19",
+        "ipfs_image": "QmWUpgvfRY1PLQ7ZehAsoMz9nptKde1huidWbqz5Nxd3gi"
     },
     {
         "title": "Mine Bitcoin",
         "number": 12,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti",
+        "ipfs_metadata": "QmQqMKDMKiRhgbFBrmAJPknzYHEKuH7VrqPZ7NS5vFoy78",
+        "ipfs_image": "Qmcard2X4E71TjJCEUgy1B9HpuciBqv7Q4TM9VR5F9DQ4d"
     },
     {
         "title": "BTC",
         "number": 13,
         "supply": 2000,
         "artist": "Cryptograffiti",
-        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti"
+        "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti",
+        "ipfs_metadata": "QmeShnRPe6uiRcBy81nQXDZ9TWUpFNQfiAThf9ruAQGcRa",
+        "ipfs_image": "QmdzhK28Uama6xJstZZbTRh8RPT2dbT4dBoxjdAaC6gN7N"
     },
     {
         "title": "CryptoCurrency",
         "number": 14,
         "supply": 500,
         "artist": "Phneep",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
+        "ipfs_metadata": "Qmdi8vQuQQWksiM5HCCVXfzSzcaemzQwYkUe4Tb94DP6vK",
+        "ipfs_image": "QmaSnfjfwzzxfuLSV4xwbYy3UkHEEKupPrxYDgyCYTD46R"
     },
     {
         "title": "DigitalCash",
         "number": 15,
         "supply": 500,
         "artist": "Phneep",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
+        "ipfs_metadata": "QmS3UF256kWHbX8Wi7CYExyCxzLNX1nsaMwpaGBN73rr31",
+        "ipfs_image": "QmdzQMqmW2tVSezd9odrbAwvXy8Gx43K3rfG9rtcVaZk5v"
     },
     {
         "title": "OriginalCoin",
         "number": 16,
         "supply": 500,
         "artist": "Phneep",
-        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com"
+        "description": "All proceeds from the initial sale of this card were donated to seansoutpost.com",
+        "ipfs_metadata": "Qmbj1YCmQidTzxgjLmu1b99PPdXZLSgk72YZQSt9LEEe1R",
+        "ipfs_image": "Qmf1STAkk5yoDsBHw8ncxQT5T6ZBH6hk2ri8oj8AaB73yt"
     },
     {
         "title": "UASF",
         "number": 17,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "Ready to dip our toes in to the waters of the Bitcoin's first user-activated soft fork."
+        "description": "Ready to dip our toes in to the waters of the Bitcoin's first user-activated soft fork.",
+        "ipfs_metadata": "QmbDsZABRUPMcuoFWePRH7YiGyR64udWHc4u1mQPJYmB2c",
+        "ipfs_image": "QmY2qTLrNmUvwVyKQF1JFqxSyZPtDH9cBo4CteLY3mtUYb"
     },
     {
         "title": "To The Moon",
         "number": 18,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "In retrospect, dog coins on the moon were inevitable."
+        "description": "In retrospect, dog coins on the moon were inevitable.",
+        "ipfs_metadata": "QmXafwRpoJPiiQ9TZihhbSsFmgKqKMqrHSRLkp1wyQ3jUU",
+        "ipfs_image": "QmajPpYuqQVasd9AzTYUaDrPW6nzjigY91evEUDoNiuefW"
     },
     {
         "title": "Dogs Trading",
         "number": 19,
         "supply": 500,
         "artist": "Cryptopop",
-        "description": "Parody of a parody: these dogs have been shillin' and chillin' since 1903."
+        "description": "Parody of a parody: these dogs have been shillin' and chillin' since 1903.",
+        "ipfs_metadata": "QmTWJR1XJ2svexE2NT3A6cCtks8rgh6TKYaLYXwfHapNDN",
+        "ipfs_image": "QmTKfVeZFaqawgoayTLqgYdfaxabGNkoXrS9FjZBHeqoui"
     },
     {
         "title": "MadBitcoins",
         "number": 20,
         "supply": 2000,
         "artist": "Phneep",
-        "description": "The MadBitcoins trading card."
+        "description": "The MadBitcoins trading card.",
+        "ipfs_metadata": "Qmd3HzUX52MmZcj1Se3ocgYWEJWSvzSceEqQFV1YL7LRWL",
+        "ipfs_image": "QmS19CRKqSLDNcs6gEhs28W8qMUmd44DiDbZoR2Dd5cwpc"
     },
     {
         "title": "The Wizard",
         "number": 21,
         "supply": 500,
         "artist": "Robek World",
-        "description": "The Wizard – Bears a striking resemblance to an ancient mad bitcoiner."
+        "description": "The Wizard – Bears a striking resemblance to an ancient mad bitcoiner.",
+        "ipfs_metadata": "QmX6stsihT3SNUakiFQLWU1cjvH7rC3pqtCnToxNn2T8JS",
+        "ipfs_image": "QmVyhSDjwRi8WAeR1M8C8w2oEVNnvubdoLSkempio5UkBV"
     },
     {
         "title": "The Bard",
         "number": 22,
         "supply": 500,
         "artist": "Robek World",
-        "description": "The Bard – A handsome, CEO looking songster."
+        "description": "The Bard – A handsome, CEO looking songster.",
+        "ipfs_metadata": "Qmc1sj8LRdfbPinoqKMmAe6UvJUG33VMmSU3XzNK2GnjJB",
+        "ipfs_image": "QmNTGskeNwg4JA31YkavEd1wRMpXWas6Cd1qGdmVTaHnX1"
     },
     {
         "title": "The Barbarian",
         "number": 23,
         "supply": 250,
         "artist": "Robek World",
-        "description": "The Barbarian – Voted most likely to hack through solidity."
+        "description": "The Barbarian – Voted most likely to hack through solidity.",
+        "ipfs_metadata": "Qmdwh3S4imtE5RxZ4ddAzy3DMqNrD11JL6SATTyREuvrtN",
+        "ipfs_image": "QmZy6RuSuADSErzpWAoMkbBNanrvPLmAz4pwNxu9RKmnAC"
     },
     {
         "title": "Complexity",
         "number": 24,
         "supply": 333,
         "artist": "Daniel Friedman",
-        "description": "Inspired by Complexity: the study, wonder, and application of patterns across systems. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper."
+        "description": "Inspired by Complexity: the study, wonder, and application of patterns across systems. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper.",
+        "ipfs_metadata": "QmbfTxH6XvbgGcyWWaygmPko6NQ6tKuT6dJj5WjnQGp5g8",
+        "ipfs_image": "QmSzLBMA2xwX3usGb7PpNQpFR8Ca2aRGA8Ef21Z1jxWdrM"
     },
     {
         "title": "Passion",
         "number": 25,
         "supply": 222,
         "artist": "Daniel Friedman",
-        "description": "Inspired by Passion: the raw energy driving the engines of life. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper."
+        "description": "Inspired by Passion: the raw energy driving the engines of life. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper.",
+        "ipfs_metadata": "QmXHyK19F4sMAUi6XYz1BJJYzxsdp8koVnL4BwsFA93Q47",
+        "ipfs_image": "QmehM1Q3AWhAQjLoX4v7qEHK3gMumu9YrhTE784f5Uw6XT"
     },
     {
         "title": "Education",
         "number": 26,
         "supply": 111,
         "artist": "Daniel Friedman",
-        "description": "Inspired by Education: the unfolding process of improvement and discovery. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper."
+        "description": "Inspired by Education: the unfolding process of improvement and discovery. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper.",
+        "ipfs_metadata": "QmYK88qy84rcL46CZGPqpKRm4fE2PQYJ931pV69ZNi4J1D",
+        "ipfs_image": "QmZjuWa7igycc85i11tE46VMGYhP64g5JX95zVyZkePBar"
     },
     {
         "title": "Blue",
         "number": 27,
         "supply": 600,
         "artist": "Marisol Vengas",
-        "description": "We Are All Marisol Vengas."
+        "description": "We Are All Marisol Vengas.",
+        "ipfs_metadata": "QmcUTEkPpmRPHCHiXskd9daQcEZwGzkHgybZmCWmFYha1T",
+        "ipfs_image": "QmZ4zQtN2PNEw3jMkjvTF1qQaTKYpvPpAdGYMnrAjpnPvW"
     },
     {
         "title": "Pink",
         "number": 28,
         "supply": 400,
         "artist": "Marisol Vengas",
-        "description": "Marisol Vengas is Hot."
+        "description": "Marisol Vengas is Hot.",
+        "ipfs_metadata": "QmTmi8j5BBE5FWhEDAg1bTqpmkkEcaPgTUeYFJ4z3PxXqN",
+        "ipfs_image": "QmYcTX1xpFYiDGSQsjXWm4v1QkjWjDij8zUHHXbz32MLGt"
     },
     {
         "title": "Yellow",
         "number": 29,
         "supply": 200,
         "artist": "Marisol Vengas",
-        "description": "Marisol Vengas is From The Future."
+        "description": "Marisol Vengas is From The Future.",
+        "ipfs_metadata": "QmVTGJtgnUgnMPttJV2VkfonCUYLRnJqX66gJLiig5QVgC",
+        "ipfs_image": "QmTa5bXZUnQyN2BvjhuUcNzGvhxkwvhUDZ3CgGsyzNukoL"
     },
     {
         "title": "Eclipse",
         "number": 30,
         "supply": 821,
         "artist": "Thoros of Myr",
-        "description": "North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr."
+        "description": "North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr.",
+        "ipfs_metadata": "QmQBu8jYC3vEGzx59BUW4knBdNRyFd8aTVLLFCEprdjZ5e",
+        "ipfs_image": "QmZH7MZK6XGELZNhHre2LJiBcXFpsi1wzhmx1MGcApahnD"
     }
 ]
