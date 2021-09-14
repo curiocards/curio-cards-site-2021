@@ -89,8 +89,7 @@ class MainView extends React.Component {
           <meta name="twitter:site" content="MyCurioCards" />
           <meta name="twitter:title" content="Curio Cards" />
           <meta name="twitter:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
-          <meta name="twitter:image" content="/icons/icon-512x512.png" />
-
+          <meta name="twitter:image" content="https://curio.cards/icons/icon-512x512.png" />
         </Helmet>
 
         <Hero />

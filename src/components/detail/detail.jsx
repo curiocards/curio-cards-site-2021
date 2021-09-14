@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet"
 
 import "../global.css";
 import "../reset.css";
@@ -36,8 +37,29 @@ class Detail extends React.Component {
       biography = <p className="description white">{biography}</p>
     }
 
+    const title = `Curio Cards – ${this.props.card.title}`;
+    const ogImage = "https://curio.cards" + cardImages[this.props.card.number];
+    const canonicalUrl = `https://curio.cards/card/${this.props.card.number}`;
+    const ogDescription = this.props.card.description;
+
     return (
       <main className="overlay">
+        <Helmet>
+          <html lang="en" />
+          <title>{title}</title>
+          <link rel="canonical" href={canonicalUrl} />
+          <meta name="description" content={this.props.card.description} />
+
+          <meta property="og:title" content={title} />
+          <meta property="og:image" content={ogImage} />
+          <meta property="og:url" content={canonicalUrl} />
+          <meta property="og:description" content={this.props.card.description} />
+
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={this.props.card.description} />
+          <meta name="twitter:image" content={ogImage} />
+        </Helmet>
+
         <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="Close card" /> </button>
         <article className="card-info">
           <a href={`https://gateway.ipfs.io/ipfs/${this.props.card.ipfs_image}`} target="_blank">
