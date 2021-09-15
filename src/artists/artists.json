@@ -14,7 +14,7 @@
     {
         "name": "Marisol Vengas",
         "website": "facebook.com/MarisolVengas",
-        "biography": "Marisol Vengas is an anonymous-shrouded-in-secrecy artist collective originating from Northern California. She seems to operate in a AI-induced hive mindset. Some of her works are produced from over a dozen or plus artists who have never met in real life. Some of them have discovered each other from forums and online groups, and none of the know how they've been to selected to participate in the collective. The artists don't know who they get the pieces from or where they end up. No one really knows who started Marisol, but they do know she's going to running for a long time. She's a truly a decentralized living artist. Currently she has exhibited over 10 countries and has produced thousands of works. You can find these work from the streets of Bangladesh to the museums of Paris. Clues about her existence are littered throughout her work."
+        "biography": "Marisol Vengas is an anonymous-shrouded-in-secrecy artist collective originating from Northern California. She seems to operate in a AI-induced hive mindset. Some of her works are produced from over a dozen or plus artists who have never met in real life. Some of them have discovered each other from forums and online groups, but none of the know how they've been selected to participate in the collective. The artists don't know who they get the pieces from or where they end up. No one really knows who started Marisol, but they do know she's going to be running for a long time. She's truly a decentralized living artist. Currently she has exhibited in over 10 countries and has produced thousands of works. You can find these works from the streets of Bangladesh to the museums of Paris. Clues about her existence are littered throughout her work."
     },
     {
         "name": "Daniel Friedman",
@@ -30,9 +30,11 @@
     {
         "name": "Cryptopop",
         "twitter": "helloluis",
-        "website": "cryptopop.net"
+        "website": "cryptopop.net",
+        "biography": "Luis is a Filipino crypto artist and author, and dreams of a day when all animals, not just dogs, will be on the blockchain. Oh, wait."
     },
     {
-        "name": "Thoros of Myr"
+        "name": "Thoros of Myr",
+        "biography": "Little is known about Thoros of Myr."
     }
 ]
