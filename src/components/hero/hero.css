@@ -9,6 +9,7 @@ main {
     padding-top: 24px;
     box-sizing: border-box;
     border: var(--border);
+    background: var(--white);
 }
 
 .centerpiece {

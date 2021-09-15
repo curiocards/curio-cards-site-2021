@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
-import Fade from 'react-reveal/Fade';
 
 import Hero  from "../components/hero/hero"
 import Gallery  from "../components/gallery/gallery"
