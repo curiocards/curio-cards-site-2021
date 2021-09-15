@@ -25,15 +25,20 @@ class Hero extends React.Component {
         </div>
         <footer>
           <a href="https://docs.curio.cards/" target="_blank" rel="noopener noreferrer" className="footer__link orangeLight border cell center on-hover-white">
-          <img src={info} alt="" className="button-icon" />
-            About the Project</a>
+            <img src={info} alt="" className="button-icon" />
+            About the Project
+          </a>
+
           <a href="https://discord.curio.cards" target="_blank" rel="noopener noreferrer" className="footer__link orange border cell center on-hover-white">
-          <img src={discord} alt="" className="button-icon discord-icon" />
-          <img src={curio} className="illo-curio" alt="" />
-            Join the Discord</a>
+            <img src={discord} alt="" className="button-icon discord-icon" />
+            <img src={curio} className="illo-curio" alt="" />
+            Join the Discord
+          </a>
+
           <a href="https://twitter.com/MyCurioCards" target="_blank" rel="noopener noreferrer"className="footer__link orangeLight border cell center on-hover-white">
-          <img src={twitter} alt="" className="button-icon twitter-icon" />
-            Follow us on Twitter</a>
+            <img src={twitter} alt="" className="button-icon twitter-icon" />
+            Follow us on Twitter
+          </a>
         </footer>
       </main>
     );

@@ -60,7 +60,7 @@ class Detail extends React.Component {
           <meta name="twitter:image" content={ogImage} />
         </Helmet>
 
-        <button className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img src={close} alt="Close card" /> </button>
+        <div className="icon close cell orange" onClick={this.props.deselectCardCallback}> <img class="close-img" src={close} alt="Close card" /> </div>
         <article className="card-info">
           <a href={`https://gateway.ipfs.io/ipfs/${this.props.card.ipfs_image}`} target="_blank">
             <img src={cardImages[this.props.card.number]} alt={`${this.props.card.title} card`} className="card-img-detail" />

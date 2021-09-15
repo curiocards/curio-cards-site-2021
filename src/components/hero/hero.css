@@ -53,6 +53,11 @@ footer {
     width: 100%;
 }
 
+footer > .border {
+    border-left: 0;
+    border-right: 0;
+}
+
 .footer__link {
     text-align: center;
 }
@@ -63,7 +68,6 @@ footer {
 
 /* Desktop */
 @media only screen and (min-width: 1280px) {
-
     main {
         width: 50vw;
         height: 100vh;

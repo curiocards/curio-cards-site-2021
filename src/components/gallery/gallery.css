@@ -3,7 +3,6 @@ nav {
     position: sticky;
     position: -webkit-sticky;
     bottom: 0;
-    width: 100vw;
     filter: drop-shadow(0px 4px 10px rgba(245, 112, 64, 0.1));
 }
 
@@ -35,7 +34,12 @@ aside {
     padding-left: 16px;
     cursor: pointer;
 }
-  
+
+.leaderboard {
+    border-left: 0;
+    border-top: 0;
+}
+
 form {
     display: flex;
 }
@@ -45,6 +49,7 @@ form {
     padding-left: 16px;
     width: 100%;
     box-sizing: border-box;
+    border-left: 0;
 }
 
 .input__eth:disabled {

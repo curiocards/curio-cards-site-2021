@@ -24,6 +24,8 @@ class MainView extends React.Component {
   }
 
   selectCardCallback(cardNumber) {
+    console.debug("Selecting card " + cardNumber);
+
     if (!this.props.selectedAddress) {
       navigate(`/card/${cardNumber}`,
         {
@@ -33,8 +35,6 @@ class MainView extends React.Component {
           }
         });
     } else {
-      console.debug("Selecting card " + cardNumber);
-
       // if on mobile, scroll to top
       if (!window.matchMedia("only screen and (min-width: 1280px)").matches) {
         window.scrollTo(0, 0);

@@ -20,6 +20,11 @@ main.overlay {
     cursor: pointer;
 }
 
+.close-img {
+    padding-left: 8px;
+    padding-top: 8px;
+}
+
 .card-img-detail {
     width: 280px;
     display: none;

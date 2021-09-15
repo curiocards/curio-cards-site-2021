@@ -31,7 +31,7 @@ class Gallery extends React.Component {
     };
 
     this.handleAddressSubmit = this.handleAddressSubmit.bind(this);
-    this.handleCardClick = this.handleCardClick.bind(this)
+    this.handleCardClick = this.handleCardClick.bind(this);
   }
 
   async componentDidMount() {
@@ -131,7 +131,7 @@ class Gallery extends React.Component {
 
         console.debug(`Curio balance for address ${inputAddress}:\n${JSON.stringify(holdings, null, 2)}`);
       } else {
-        console.log("todo, handle fetch failure");
+        console.warn("Unable to fetch balances!");
         this.setState({
           lookupFailure: true
         });
@@ -221,7 +221,7 @@ class Gallery extends React.Component {
     let leaderboardMessage = null;
     if (this.state.selectedAddress && !this.state.loading) {
       leaderboardMessage = <div className="orangeLight center pair-cell hide-on-mobile">
-        <p className="orangeLight center cell border">Curious who has most cards?&#160;<a target="_blank" rel="noopener noreferrer" className="orangeLight underline center cell" href="https://leaderboard.curio.cards/"> See the Leaderboard</a></p>
+        <p className="orangeLight center cell border leaderboard">Curious who has most cards?&#160;<a target="_blank" rel="noopener noreferrer" className="orangeLight underline center cell" href="https://leaderboard.curio.cards/"> See the Leaderboard</a></p>
         
       </div>;
     }
