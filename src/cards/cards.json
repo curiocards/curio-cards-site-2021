@@ -56,7 +56,7 @@
     {
         "title": "Sculpture",
         "number":7,
-        "supply": 2000,
+        "supply": 1865,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "QmUGmWwrNR7JKBCSu3CkGnTYSFat7y2AiUzACcbAoZcj2d",
@@ -74,7 +74,7 @@
     {
         "title": "Book",
         "number": 9,
-        "supply": 2000,
+        "supply": 1817,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "Qmctv89ppbYTuwCWVFA9waVCeE8g6YM3Ah54bZW1WGmEHh",
@@ -101,7 +101,7 @@
     {
         "title": "Mine Bitcoin",
         "number": 12,
-        "supply": 2000,
+        "supply": 1837,
         "artist": "Cryptograffiti",
         "description": "I used to put these logos on neighborhood ATMs. Repurposing banking materials has remained a theme in my work. I like the idea of using soon-to-be extinct items to help spread the new cryptocurrency movement.\n\n  — Cryptograffiti",
         "ipfs_metadata": "QmQqMKDMKiRhgbFBrmAJPknzYHEKuH7VrqPZ7NS5vFoy78",
@@ -146,7 +146,7 @@
     {
         "title": "UASF",
         "number": 17,
-        "supply": 500,
+        "supply": 492,
         "artist": "Cryptopop",
         "description": "Ready to dip our toes into the waters of the Bitcoin's first user-activated soft fork.\n\n...wait, did we also accidentally activate a soft fork on this card too?",
         "ipfs_metadata": "QmbDsZABRUPMcuoFWePRH7YiGyR64udWHc4u1mQPJYmB2c",
@@ -155,7 +155,7 @@
     {
         "title": "To The Moon",
         "number": 18,
-        "supply": 500,
+        "supply": 492,
         "artist": "Cryptopop",
         "description": "In retrospect, dog coins on the moon were inevitable.",
         "ipfs_metadata": "QmXafwRpoJPiiQ9TZihhbSsFmgKqKMqrHSRLkp1wyQ3jUU",
@@ -173,7 +173,7 @@
     {
         "title": "MadBitcoins",
         "number": 20,
-        "supply": 2000,
+        "supply": 1547,
         "artist": "Phneep",
         "description": "The MadBitcoins trading card.",
         "ipfs_metadata": "Qmd3HzUX52MmZcj1Se3ocgYWEJWSvzSceEqQFV1YL7LRWL",
@@ -227,7 +227,7 @@
     {
         "title": "Education",
         "number": 26,
-        "supply": 111,
+        "supply": 106,
         "artist": "Daniel Friedman",
         "description": "Inspired by Education: the unfolding process of improvement and discovery. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper.",
         "ipfs_metadata": "QmYK88qy84rcL46CZGPqpKRm4fE2PQYJ931pV69ZNi4J1D",
@@ -236,7 +236,7 @@
     {
         "title": "Blue",
         "number": 27,
-        "supply": 600,
+        "supply": 565,
         "artist": "Marisol Vengas",
         "description": "We Are All Marisol Vengas.",
         "ipfs_metadata": "QmcUTEkPpmRPHCHiXskd9daQcEZwGzkHgybZmCWmFYha1T",
@@ -263,7 +263,7 @@
     {
         "title": "Eclipse",
         "number": 30,
-        "supply": 821,
+        "supply": 816,
         "artist": "Thoros of Myr",
         "description": "North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr.",
         "ipfs_metadata": "QmQBu8jYC3vEGzx59BUW4knBdNRyFd8aTVLLFCEprdjZ5e",
