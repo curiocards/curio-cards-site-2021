@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Helmet } from "react-helmet"
 import { navigate } from "gatsby"
+//import { useLocation } from '@reach/router'
 
 import Hero  from "../components/hero/hero"
 import Gallery  from "../components/gallery/gallery"
@@ -58,7 +59,18 @@ class MainView extends React.Component {
   }
 
   setArtistFilterCallback(val) {
-    this.setState({artistFilter: val});
+    if (this.props.location.pathname != "/" && !this.props.location.pathname.startsWith("/artist")) {
+      this.setState({artistFilter: val});
+    } else {
+      const artistSlug = this.props.allArtists.nodes.find(x => x.name == val).slug;
+      navigate(`/artist/${artistSlug}`,
+        {
+          state: {
+            sort: this.state.sort
+          }
+        });
+
+    }
   }
 
   setSortCallback(val) {

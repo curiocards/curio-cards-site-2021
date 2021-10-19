@@ -1,26 +1,20 @@
 import * as React from "react"
-import { graphql, navigate } from "gatsby"
+import { graphql } from "gatsby"
 
-import MainView from "../views/main-view"
+import MainView  from "../../views/main-view"
 
-const IndexPage = (props) => {
+const ArtistPage = (props) => {
   const { allCards, allArtists } = props.data;
-
-  // if the URL contained ?address=0x12341234, pull that out and navigate to /address page instead.
-  const queryString = new URLSearchParams(props.location.search);
-  const addressQuery = queryString.get("address");
-  if (addressQuery) {
-    navigate(`/address/${addressQuery}`, { replace: true });
-  }
 
   // pull out state from props.location, so we set filters appropriately on forward/back browser navigation
   const artistFilter = props.location.state ? props.location.state.artistFilter : null;
   const sort = props.location.state ? props.location.state.sort : null;
+  const urlArtist = allArtists.nodes.find(x => x.slug == props.pageContext.slug);
 
-  return <MainView allCards={allCards} allArtists={allArtists} artistFilter={artistFilter} sort={sort} location={props.location} />
+  return <MainView allCards={allCards} allArtists={allArtists} selectedCardNumber={props.pageContext.number} artistFilter={urlArtist.name} sort={sort} location={props.location} />
 }
 
-export default IndexPage
+export default ArtistPage
 
 export const query = graphql`
   query {

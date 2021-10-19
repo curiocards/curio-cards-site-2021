@@ -10,7 +10,7 @@ const CardPage = (props) => {
   const artistFilter = props.location.state ? props.location.state.artistFilter : null;
   const sort = props.location.state ? props.location.state.sort : null;
 
-  return <MainView allCards={allCards} allArtists={allArtists} selectedCardNumber={props.pageContext.number} artistFilter={artistFilter} sort={sort} />
+  return <MainView allCards={allCards} allArtists={allArtists} selectedCardNumber={props.pageContext.number} artistFilter={artistFilter} sort={sort} location={props.location} />
 }
 
 export default CardPage
@@ -33,6 +33,7 @@ export const query = graphql`
         biography
         id
         name
+        slug
         twitter
         website
       }
