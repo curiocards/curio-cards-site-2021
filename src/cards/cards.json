@@ -2,7 +2,7 @@
     {
         "title": "Apples",
         "number": 1,
-        "supply": 1809,
+        "supply": 2154,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "QmWHUnrdfA4w89TeepZqrvygbaF9wV48k97Wf27skL5cry",
@@ -11,7 +11,7 @@
     {
         "title": "Nuts",
         "number": 2,
-        "supply": 1630,
+        "supply": 1589,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "QmVJn6B289Xt3cq9evzubdyk4f1usPAu277SmUusmdYYWU",
@@ -20,7 +20,7 @@
     {
         "title": "Berries",
         "number": 3,
-        "supply": 1584,
+        "supply": 1635,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "QmWBb6T4nviPWdAyqGJTki7VA6fpTmcYP37U9jpYAfhzPP",
@@ -29,7 +29,7 @@
     {
         "title": "Clay",
         "number": 4,
-        "supply": 460,
+        "supply": 510,
         "artist": "Phneep",
         "description": "The first 10 cards exist as a collection, and tell a story that has since been forgotten, unless you can track it down.",
         "ipfs_metadata": "Qmbcw8ix8xdK1reFpDEjKtk9EWuRwrbMKqvEvWkttNzXkH",
@@ -227,7 +227,7 @@
     {
         "title": "Education",
         "number": 26,
-        "supply": 106,
+        "supply": 111,
         "artist": "Daniel Friedman",
         "description": "Inspired by Education: the unfolding process of improvement and discovery. Scanned image of 431 x 575 pixels, of hand-made ink drawing on 8.5 x 11 inch paper.",
         "ipfs_metadata": "QmYK88qy84rcL46CZGPqpKRm4fE2PQYJ931pV69ZNi4J1D",
@@ -254,7 +254,7 @@
     {
         "title": "Yellow",
         "number": 29,
-        "supply": 200,
+        "supply": 177,
         "artist": "Marisol Vengas",
         "description": "Marisol Vengas is From The Future.",
         "ipfs_metadata": "QmVTGJtgnUgnMPttJV2VkfonCUYLRnJqX66gJLiig5QVgC",
