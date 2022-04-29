@@ -90,6 +90,18 @@ class Gallery extends React.Component {
     if(inputAddress.includes(".eth")){
       parsedInput = await this.state.provider.resolveName(inputAddress)
     }
+    try {
+      var result = ethers.utils.getAddress(parsedInput)
+    }
+    catch (e) {
+      this.setState({
+        cards: [],
+        loading: false,
+        lookupFailure: true
+      });
+      return;
+    }
+    
     
     if (parsedInput) {
       // Fetch holdings for address
