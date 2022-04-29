@@ -9,7 +9,8 @@ import "../fonts/type.css"
 
 import close from "../../images/i-close.svg"
 import search from "../../images/i-search.svg"
-import { cardImages, wrapperAddr, wrapperAbi, curioAddresses, erc20Abi } from "../constants.jsx";
+import { cardImages} from "../constants.jsx";
+import {getCards, getCardIDFromAddress} from "../../services/graph";
 
 var _ = require('lodash');
 
@@ -67,20 +68,6 @@ class Gallery extends React.Component {
     }
   }
 
-  async getErc20Balance(addr, cardNumber) {
-    const contractAddr = curioAddresses["CRO" + cardNumber];
-    const contract = await new ethers.Contract(contractAddr, erc20Abi, this.state.provider);
-    return await contract.balanceOf(addr);
-  }
-
-  async getErc1155BalanceBatch(addr) {
-    const contract = await new ethers.Contract(wrapperAddr, wrapperAbi, this.state.provider);
-    const addrArray = Array(30).fill(addr);
-    let idArray = Array.from(Array(31).keys());
-    idArray.shift();
-    return await contract.balanceOfBatch(addrArray, idArray);
-  }
-
   async updateCards(inputAddress) {
     this.setState({
       loading: true,
@@ -89,30 +76,24 @@ class Gallery extends React.Component {
 
     let cards = _.cloneDeep(this.props.cards);
     let holdings = {};
-
-    if (inputAddress) {
+    var parsedInput = inputAddress;
+    if(inputAddress.includes(".eth")){
+      parsedInput = await this.state.provider.resolveName(inputAddress)
+    }
+    
+    if (parsedInput) {
       // Fetch holdings for address
-      let erc20Promises = [];
-      for (let i = 1; i < 31; i++)
-        erc20Promises.push(this.getErc20Balance(inputAddress, i));
-      const erc1155Promise = this.getErc1155BalanceBatch(inputAddress);
-
-
+    
       let fetchSuccess = true;
-      const erc20Balances = await Promise.all(erc20Promises).catch(error => {
-        console.error("Error fetching ERC20 balance;", error);
-        fetchSuccess = false;
-      });
-      const erc1155Balances = await erc1155Promise.catch(error => {
-        console.error("Error fetching ERC1155 balance;", error);
-        fetchSuccess = false;
-      });
+      
+      let cardBalances = await getCards(parsedInput.toLowerCase());
 
       if (fetchSuccess) {
-        for (let i = 0; i < 30; i++) {
-          holdings[i+1] = {
-            "erc1155": parseInt(erc1155Balances[i]._hex, 16),
-            "erc20": parseInt(erc20Balances[i], 10)
+        for (let i = 0; i < cardBalances.length; i++) {
+          let cardId = getCardIDFromAddress(cardBalances[i].type.id)
+          holdings[cardId] = {
+            "erc1155": parseInt(cardBalances[i].wrappedOfficial) + parseInt(cardBalances[i].wrappedUnofficial),
+            "erc20": parseInt(cardBalances[i].unwrapped)
           };
         }
 
@@ -128,7 +109,9 @@ class Gallery extends React.Component {
           }
         }
 
-        console.debug(`Curio balance for address ${inputAddress}:\n${JSON.stringify(holdings, null, 2)}`);
+        
+
+        console.debug(`Curio balance for address ${parsedInput}:\n${JSON.stringify(holdings, null, 2)}`);
       } else {
         console.warn("Unable to fetch balances!");
         this.setState({
