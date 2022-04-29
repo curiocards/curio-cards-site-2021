@@ -268,5 +268,14 @@
         "description": "North America watched a cosmic event together when an eclipse happened on 8/21. To commemorate this lining up with the release of the 30th card, a special edition animated Eclipse Card with a total amount of 821 cards was created by the anonymous artist Thoros of Myr.",
         "ipfs_metadata": "QmQBu8jYC3vEGzx59BUW4knBdNRyFd8aTVLLFCEprdjZ5e",
         "ipfs_image": "QmZH7MZK6XGELZNhHre2LJiBcXFpsi1wzhmx1MGcApahnD"
+    },
+    {
+        "title": "MISPRINT - UASF",
+        "number": 172,
+        "supply": 500,
+        "artist": "Cryptopop",
+        "description": "MISPRINT - Ready to dip our toes into the waters of the Bitcoin's first user-activated soft fork.\n\n...wait, did we also accidentally activate a soft fork on this card too?",
+        "ipfs_metadata": "QmbDsZABRUPMcuoFWePRH7YiGyR64udWHc4u1mQPJYmB2c",
+        "ipfs_image": "QmQ2BU5YBVjezq6JyPMXoT2prGsPYaT4VBioeNq5Vm6EQr"
     }
 ]

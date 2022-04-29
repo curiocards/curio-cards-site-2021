@@ -76,11 +76,18 @@ class Gallery extends React.Component {
 
     let cards = _.cloneDeep(this.props.cards);
     let holdings = {};
+    if(!inputAddress){
+      this.setState({
+        cards: cards,
+        loading: false,
+      });
+      return;
+    }
     var parsedInput = inputAddress;
     if(inputAddress.includes(".eth")){
       parsedInput = await this.state.provider.resolveName(inputAddress)
     }
-    
+   
     if (parsedInput) {
       // Fetch holdings for address
     
