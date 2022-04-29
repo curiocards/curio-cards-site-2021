@@ -76,6 +76,7 @@ class Gallery extends React.Component {
 
     let cards = _.cloneDeep(this.props.cards);
     let holdings = {};
+
     if(!inputAddress){
       this.setState({
         cards: cards,
@@ -83,17 +84,27 @@ class Gallery extends React.Component {
       });
       return;
     }
+
     var parsedInput = inputAddress;
+
     if(inputAddress.includes(".eth")){
       parsedInput = await this.state.provider.resolveName(inputAddress)
     }
-   
+    
     if (parsedInput) {
       // Fetch holdings for address
     
       let fetchSuccess = true;
       
       let cardBalances = await getCards(parsedInput.toLowerCase());
+
+      if(cardBalances.length === 0) {
+        this.setState({
+          cards: [],
+          loading: false,
+        });
+        return;
+      }
 
       if (fetchSuccess) {
         for (let i = 0; i < cardBalances.length; i++) {
