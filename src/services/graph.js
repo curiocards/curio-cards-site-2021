@@ -49,7 +49,7 @@ const cardAddressToIDArray = [
   { id: "24", address: "0xe67dad99c44547b54367e3e60fc251fc45a145c6" },
   { id: "25", address: "0xc7f60c2b1dbdfd511685501edeb05c4194d67018" },
   { id: "26", address: "0x1cb5bf4be53eb141b56f7e4bb36345a353b5488c" },
-  { id: "27", address: "0xfb9f3a2502d01d43167a0a6e80be03171df407e" },
+  { id: "27", address: "0xFb9F3fa2502d01d43167A0A6E80bE03171DF407E" },
   { id: "28", address: "0x59d190e8a2583c67e62eec8da5ea7f050d8bf27e" },
   { id: "29", address: "0xd3540bcd9c2819771f9d765edc189cbd915feabd" },
   { id: "30", address: "0x7f5b230dc580d1e67df6ed30dee82684dd113d1f" },
@@ -57,7 +57,7 @@ const cardAddressToIDArray = [
 ];
 
 export function getCardIDFromAddress(address) {
-  return cardAddressToIDArray.find((card) => card.address == address).id;
+  return cardAddressToIDArray.find((card) => card.address.toLowerCase() == address.toLowerCase()).id;
 }
 
 export function getAddressFromID(id) {
