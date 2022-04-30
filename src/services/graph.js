@@ -1,8 +1,8 @@
-import axios from "axios";
+var axios = require("axios");
 const graphEndpoint =
   "https://gateway.thegraph.com/api/d3a8ff0c7624be9eb5a2f5e31f8b51c7/subgraphs/id/JBnWrv9pvBvSi2pUZzba3VweGBTde6s44QvsDABP47Gt";
 
-export const getCards = async (address: string): Promise<any> => {
+export const getCards = async (address) => {
   var data = await axios.post(graphEndpoint, {
     query: `
     {
@@ -56,10 +56,10 @@ const cardAddressToIDArray = [
   { id: "172", address: "0xe0b5e6f32d657e0e18d4b3e801ebc76a5959e123" }
 ];
 
-export function getCardIDFromAddress(address: string): string {
+export function getCardIDFromAddress(address) {
   return cardAddressToIDArray.find((card) => card.address == address).id;
 }
 
-export function getAddressFromID(id: string): string {
+export function getAddressFromID(id) {
   return cardAddressToIDArray.find((card) => card.id == id).address;
 }
