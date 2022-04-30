@@ -77,7 +77,7 @@ class Detail extends React.Component {
             <p className="description white">{this.props.card.description}</p>
           </div>
         </article>
-        <a href={`https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
+        <a href={this.props.card.number === 172 ?`https://opensea.io/assets/0x3c2754c0cdc5499df1a50d608d8985070bf87b30/172` : `https://opensea.io/assets/0x73da73ef3a6982109c4d5bdb0db9dd3e3783f313/${this.props.card.number}`} target="_blank" rel="noopener noreferrer" className="cell orangeLight border shadow center button">
           {/* <img src={opensea} alt="Opensea" className="opensea-icon button-icon" /> */}
           {`Buy ${this.props.card.title}`}
         </a>
