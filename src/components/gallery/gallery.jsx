@@ -269,7 +269,7 @@ class Gallery extends React.Component {
           <div className="nav-inner">
             <form onSubmit={this.handleAddressSubmit} autoComplete="off">
               <input type="text" className="cell border white input__eth" id="address-input" autoComplete="off" spellCheck="false"
-                placeholder="Address or ENS Lookup" defaultValue={formattedAddress} disabled={!!this.state.selectedAddress} />
+                placeholder="Address or Domain Lookup" defaultValue={formattedAddress} disabled={!!this.state.selectedAddress} />
               {
                 !!this.state.selectedAddress ?
                   <button className="icon dropdown__icon cell orange"> <img src={close} alt="Close address" /> </button>
