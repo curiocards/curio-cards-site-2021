@@ -19,11 +19,12 @@ export const getCards = async (address) => {
     `,
   });
   console.log("Graph API response:", data.data);
-  if (data.data.errors.message) {
+  if (data.data.errors) {
     throw new Error(data.data.errors.message);
   }
   return data.data.data.cardBalances;
 };
+
 
 const cardAddressToIDArray = [
   { id: "1", address: "0x6aa2044c7a0f9e2758edae97247b03a0d7e73d6c" },
