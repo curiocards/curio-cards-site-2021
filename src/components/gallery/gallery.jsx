@@ -10,8 +10,9 @@ import "../fonts/type.css"
 import close from "../../images/i-close.svg"
 import search from "../../images/i-search.svg"
 import { cardImages} from "../constants.jsx";
-import {getCards, getCardIDFromAddress} from "../../services/graph";
+import { getCards, getCardIDFromAddress } from "../../services/graph";
 
+import Resolution from "@unstoppabledomains/resolution";
 var _ = require('lodash');
 
 class Gallery extends React.Component {
@@ -77,7 +78,7 @@ class Gallery extends React.Component {
     let cards = _.cloneDeep(this.props.cards);
     let holdings = {};
 
-    if(!inputAddress){
+    if (!inputAddress){
       this.setState({
         cards: cards,
         loading: false,
@@ -86,14 +87,24 @@ class Gallery extends React.Component {
     }
 
     var parsedInput = inputAddress;
-
-    if(inputAddress.includes(".eth")){
-      parsedInput = await this.state.provider.resolveName(inputAddress)
-    }
     try {
+      // parse ENS/UD domain names
+      console.log(`examining addr ${inputAddress}...`);
+      if (inputAddress.includes(".")) {
+        // ENS name?
+        console.log("parse as ens...");
+        parsedInput = await this.state.provider.resolveName(inputAddress)
+        console.log(`parsedInput: ${parsedInput}`);
+
+        // TODO- detect if unstoppable domain
+      }
+
+      // Ensure computed address is valid
       var result = ethers.utils.getAddress(parsedInput)
     }
     catch (e) {
+      console.warn("Unable to parse address");
+      console.error(e);
       this.setState({
         cards: [],
         loading: false,
@@ -108,7 +119,7 @@ class Gallery extends React.Component {
       try {
         var cardBalances = await getCards(parsedInput.toLowerCase());
       } catch (e) {
-        console.warn("Unable to fetch balances!");
+        console.warn("Unable to fetch balances");
         console.error(e);
         this.setState({
           lookupFailure: true
