@@ -105,10 +105,16 @@ class Gallery extends React.Component {
     
     if (parsedInput) {
       // Fetch holdings for address
-    
-      let fetchSuccess = true;
-      
-      let cardBalances = await getCards(parsedInput.toLowerCase());
+      try {
+        var cardBalances = await getCards(parsedInput.toLowerCase());
+      } catch (e) {
+        console.warn("Unable to fetch balances!");
+        console.error(e);
+        this.setState({
+          lookupFailure: true
+        });
+        return;
+      }
 
       if(cardBalances.length === 0) {
         this.setState({
@@ -118,36 +124,27 @@ class Gallery extends React.Component {
         return;
       }
 
-      if (fetchSuccess) {
-        for (let i = 0; i < cardBalances.length; i++) {
-          let cardId = getCardIDFromAddress(cardBalances[i].type.id)
-          holdings[cardId] = {
-            "erc1155": parseInt(cardBalances[i].wrappedOfficial) + parseInt(cardBalances[i].wrappedUnofficial),
-            "erc20": parseInt(cardBalances[i].unwrapped)
-          };
-        }
+      for (let i = 0; i < cardBalances.length; i++) {
+        let cardId = getCardIDFromAddress(cardBalances[i].type.id)
+        holdings[cardId] = {
+          "erc1155": parseInt(cardBalances[i].wrappedOfficial) + parseInt(cardBalances[i].wrappedUnofficial),
+          "erc20": parseInt(cardBalances[i].unwrapped)
+        };
+      }
 
-        // Populate address supply
-        if (Object.keys(holdings).length > 0) {
-          for (let i = 0; i < cards.length; i++) {
-            if (cards[i].number in holdings) {
-              cards[i].supply = holdings[cards[i].number].erc1155 + holdings[cards[i].number].erc20;
-              cards[i].holdings = holdings[cards[i].number];
-            } else {
-              cards[i].supply = 0;
-            }
+      // Populate address supply
+      if (Object.keys(holdings).length > 0) {
+        for (let i = 0; i < cards.length; i++) {
+          if (cards[i].number in holdings) {
+            cards[i].supply = holdings[cards[i].number].erc1155 + holdings[cards[i].number].erc20;
+            cards[i].holdings = holdings[cards[i].number];
+          } else {
+            cards[i].supply = 0;
           }
         }
-
-        
-
-        console.debug(`Curio balance for address ${parsedInput}:\n${JSON.stringify(holdings, null, 2)}`);
-      } else {
-        console.warn("Unable to fetch balances!");
-        this.setState({
-          lookupFailure: true
-        });
       }
+
+      console.debug(`Curio balance for address ${parsedInput}:\n${JSON.stringify(holdings, null, 2)}`);
     }
 
     this.setState({

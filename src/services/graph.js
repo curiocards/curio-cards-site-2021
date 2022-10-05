@@ -18,7 +18,10 @@ export const getCards = async (address) => {
     }
     `,
   });
-  console.log("RESPONSE - ", data.data);
+  console.log("Graph API response:", data.data);
+  if (data.data.errors.message) {
+    throw new Error(data.data.errors.message);
+  }
   return data.data.data.cardBalances;
 };
 
