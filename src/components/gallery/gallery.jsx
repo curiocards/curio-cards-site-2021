@@ -13,7 +13,7 @@ import { cardImages} from "../constants.jsx";
 import { getCards, getCardIDFromAddress } from "../../services/graph";
 
 import Resolution from "@unstoppabledomains/resolution";
-var _ = require('lodash');
+const _ = require('lodash');
 
 class Gallery extends React.Component {
   constructor(props) {
@@ -89,14 +89,20 @@ class Gallery extends React.Component {
     var parsedInput = inputAddress;
     try {
       // parse ENS/UD domain names
-      console.log(`examining addr ${inputAddress}...`);
+      console.debug(`examining addr ${inputAddress}...`);
       if (inputAddress.includes(".")) {
         // ENS name?
-        console.log("parse as ens...");
-        parsedInput = await this.state.provider.resolveName(inputAddress)
-        console.log(`parsedInput: ${parsedInput}`);
+        console.debug("parse as ens...");
+        parsedInput = await this.state.provider.resolveName(inputAddress);
+        console.debug(`parsedInput: ${parsedInput}`);
 
-        // TODO- detect if unstoppable domain
+        if (!parsedInput) {
+          console.debug("parse as UD");
+          // detect if unstoppable domain
+          const resolution = Resolution.fromEthersProvider(this.state.provider);
+          parsedInput = await resolution.addr(inputAddress, "ETH");
+          console.debug(`parsedInput: ${parsedInput}`);
+        }
       }
 
       // Ensure computed address is valid
