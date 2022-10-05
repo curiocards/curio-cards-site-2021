@@ -3,7 +3,7 @@ const graphEndpoint =
   "https://gateway.thegraph.com/api/d3a8ff0c7624be9eb5a2f5e31f8b51c7/subgraphs/id/JBnWrv9pvBvSi2pUZzba3VweGBTde6s44QvsDABP47Gt";
 
 export const getCards = async (address) => {
-  var data = await axios.post(graphEndpoint, {
+  var response = await axios.post(graphEndpoint, {
     query: `
     {
         cardBalances(where : { user : "${address}" } ) {
@@ -18,11 +18,11 @@ export const getCards = async (address) => {
     }
     `,
   });
-  console.log("Graph API response:", data.data);
-  if (data.data.errors) {
-    throw new Error(data.data.errors.message);
+  console.log("Graph API response:", response.data);
+  if (response.data.errors) {
+    throw new Error(response.data.errors.message);
   }
-  return data.data.data.cardBalances;
+  return response.data.data.cardBalances;
 };
 
 
