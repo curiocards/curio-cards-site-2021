@@ -71,8 +71,8 @@ class Detail extends React.Component {
               <p className="cell orangeLight center border">By {this.props.card.artist}</p>
             </div>
             <div className="pair-cell">
-              <p className="cell white center border"> Supply</p>
-              <p className="cell white center border">x{this.props.card.supply}</p>
+              <p className="cell white center border">Supply</p>
+              <a href="https://ccsupply.xyz/" target="_blank"><p className="cell white center border">x{this.props.card.supply}</p></a>
             </div>
             <p className="description white">{this.props.card.description}</p>
           </div>
