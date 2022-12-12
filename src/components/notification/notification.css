@@ -1,0 +1,15 @@
+.pink {
+    background-color: #F24645;
+    color: var(--white);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100vw;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.pink a {
+    color: var(--white);
+}

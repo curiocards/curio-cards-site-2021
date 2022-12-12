@@ -6,6 +6,7 @@ import { navigate } from "gatsby"
 import Hero  from "../components/hero/hero"
 import Gallery  from "../components/gallery/gallery"
 import Detail  from "../components/detail/detail"
+import Notification  from "../components/notification/notification"
 
 class MainView extends React.Component {
   constructor(props) {
@@ -81,34 +82,37 @@ class MainView extends React.Component {
     const selectedCard = this.props.allCards.nodes.find(card => card.number === Number(this.state.selectedCardNumber));
 
     return (
-      <div className="container">
-        <Helmet>
-          <html lang="en" />
-          <title>Curio Cards</title>
-          <link rel="canonical" href="https://curio.cards" />
-          <meta charSet="utf-8" />
-          <meta name="theme-color" content="#F57040" />
-          <meta name="description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
+      <div>
+        <div><Notification /></div>
+        <div className="container">
+          <Helmet>
+            <html lang="en" />
+            <title>Curio Cards</title>
+            <link rel="canonical" href="https://curio.cards" />
+            <meta charSet="utf-8" />
+            <meta name="theme-color" content="#F57040" />
+            <meta name="description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
 
-          <meta property="og:title" content="Curio Cards" />
-          <meta property="og:image" content="https://curio.cards/icons/icon-512x512.png" />
-          <meta property="og:url" content="https://curio.cards" />
-          <meta property="og:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
-          <meta property="og:type" content="website" />
+            <meta property="og:title" content="Curio Cards" />
+            <meta property="og:image" content="https://curio.cards/icons/icon-512x512.png" />
+            <meta property="og:url" content="https://curio.cards" />
+            <meta property="og:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
+            <meta property="og:type" content="website" />
 
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:site" content="MyCurioCards" />
-          <meta name="twitter:title" content="Curio Cards" />
-          <meta name="twitter:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
-          <meta name="twitter:image" content="https://curio.cards/icons/icon-512x512.png" />
-        </Helmet>
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:site" content="MyCurioCards" />
+            <meta name="twitter:title" content="Curio Cards" />
+            <meta name="twitter:description" content="Curio Cards is an online art show and permanent gallery that launched on May 9, 2017." />
+            <meta name="twitter:image" content="https://curio.cards/icons/icon-512x512.png" />
+          </Helmet>
 
-        <Hero />
-        <Gallery cards={this.props.allCards.nodes} selectedCardNumber={this.state.selectedCardNumber} selectedAddress={this.props.selectedAddress}
-          artistFilter={this.state.artistFilter} sort={this.state.sort}
-          selectCardCallback={this.selectCardCallback} deselectCardCallback={this.deselectCardCallback}
-          setArtistFilterCallback={this.setArtistFilterCallback} setSortCallback={this.setSortCallback} />
-        <Detail card={selectedCard} artists={this.props.allArtists.nodes} deselectCardCallback={this.deselectCardCallback} />
+          <Hero />
+          <Gallery cards={this.props.allCards.nodes} selectedCardNumber={this.state.selectedCardNumber} selectedAddress={this.props.selectedAddress}
+            artistFilter={this.state.artistFilter} sort={this.state.sort}
+            selectCardCallback={this.selectCardCallback} deselectCardCallback={this.deselectCardCallback}
+            setArtistFilterCallback={this.setArtistFilterCallback} setSortCallback={this.setSortCallback} />
+          <Detail card={selectedCard} artists={this.props.allArtists.nodes} deselectCardCallback={this.deselectCardCallback} />
+        </div>
       </div>
     );
   }

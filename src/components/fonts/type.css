@@ -17,8 +17,7 @@ h1 {
 p, a, button, figcaption, select, input, figure, select {
     font-family: Roboto Mono;
     font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 18px;
 }
 
@@ -26,7 +25,7 @@ p, a, button, figcaption, select, input, figure, select {
 /* Desktop */
 @media only screen and (min-width: 1280px) {
     h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
 }
