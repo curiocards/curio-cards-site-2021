@@ -1,6 +1,6 @@
 var axios = require("axios");
 const graphEndpoint =
-  "https://gateway.thegraph.com/api/d3a8ff0c7624be9eb5a2f5e31f8b51c7/subgraphs/id/JBnWrv9pvBvSi2pUZzba3VweGBTde6s44QvsDABP47Gt";
+  "https://gateway.thegraph.com/api/d3a8ff0c7624be9eb5a2f5e31f8b51c7/subgraphs/id/9evrJv2eigNjcpH66eyufiwVZaMpdbiqBhf1nPphHZsG";
 
 export const getCards = async (address) => {
   var response = await axios.post(graphEndpoint, {
