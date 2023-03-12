@@ -2,7 +2,7 @@
 
 **Website: https://curio.cards**
 
-Curio Cards is the First Art NFT project on Ethereum, launched as an online gallery art show on May 9, 2017.<br />
+Curio Cards is the First Art Show NFT on Ethereum, launched as an online gallery art show on May 9, 2017.<br />
 Read more about the project at [docs.curio.cards](https://docs.curio.cards).
 
 ## How it works
