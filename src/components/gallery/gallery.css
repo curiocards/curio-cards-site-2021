@@ -165,7 +165,7 @@ select {
 
     nav {
         position: fixed;
-        top: 42px;
+        top: 0;
         width: 50vw;
         height: 42px;
     }
