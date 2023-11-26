@@ -1,9 +1,7 @@
 var axios = require("axios");
-const graphEndpoint =
-  "https://gateway.thegraph.com/api/d3a8ff0c7624be9eb5a2f5e31f8b51c7/subgraphs/id/9evrJv2eigNjcpH66eyufiwVZaMpdbiqBhf1nPphHZsG";
 
 export const getCards = async (address) => {
-  var response = await axios.post(graphEndpoint, {
+  var response = await axios.post(process.env.GATSBY_GRAPH_ENDPOINT, {
     query: `
     {
         cardBalances(where : { user : "${address}" } ) {
@@ -61,9 +59,9 @@ const cardAddressToIDArray = [
 ];
 
 export function getCardIDFromAddress(address) {
-  return cardAddressToIDArray.find((card) => card.address.toLowerCase() == address.toLowerCase()).id;
+  return cardAddressToIDArray.find((card) => card.address.toLowerCase() === address.toLowerCase()).id;
 }
 
 export function getAddressFromID(id) {
-  return cardAddressToIDArray.find((card) => card.id == id).address;
+  return cardAddressToIDArray.find((card) => card.id === id).address;
 }
