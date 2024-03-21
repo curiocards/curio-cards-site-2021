@@ -10,22 +10,22 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/cards`,
-        name: "cards"
-      }
+        name: "cards",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/artists`,
-        name: "artists"
-      }
+        name: "artists",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Curio Cards`,
         short_name: `Curio Cards`,
-        description: `The world's first proto-NFT art tokens released on the Ethereum blockchain, launched on May 9, 2017`,
+        description: `The first NFT art show released on the Ethereum blockchain, May 9, 2017`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#F57040`,
@@ -36,6 +36,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/address/*`] },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-73QK1PR4BF",
+        ],
+        pluginConfig: {
+          head: true,
+          respectDNT: true,
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
     },
   ],
 };
