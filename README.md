@@ -11,7 +11,7 @@ When searching for an ethereum account, the website will make a request to the [
 
 ## Developing
 
-This site is built with Gatsby 5 and requires Node.js 18+ (see `.nvmrc`; `nvm use` picks the right version).
+This site is built with Gatsby 5 and requires Node.js 20+ (24 LTS recommended) (see `.nvmrc`; `nvm use` picks the right version).
 
 ```
 yarn install
