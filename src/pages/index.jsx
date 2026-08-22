@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, navigate } from "gatsby"
 
+import Seo from "../components/seo"
 import MainView from "../views/main-view"
 
 const IndexPage = (props) => {
@@ -21,6 +22,8 @@ const IndexPage = (props) => {
 }
 
 export default IndexPage
+
+export const Head = () => <Seo />
 
 export const query = graphql`
   query {

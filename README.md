@@ -11,4 +11,13 @@ When searching for an ethereum account, the website will make a request to the [
 
 ## Developing
 
-This site is built with Gatsby JS. Install gatsby, then run 'gatsby develop'.
+This site is built with Gatsby 5 and requires Node.js 18+ (see `.nvmrc`; `nvm use` picks the right version).
+
+```
+yarn install
+yarn develop   # local dev server at http://localhost:8000
+yarn build     # production build into public/
+yarn serve     # serve the production build
+```
+
+Runtime configuration lives in `.env.development` / `.env.production` (`GATSBY_GRAPH_ENDPOINT`, `GATSBY_INFURA_API_KEY`).
