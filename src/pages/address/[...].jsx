@@ -1,7 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import MainView  from "../views/main-view"
+import Seo from "../../components/seo"
+import MainView  from "../../views/main-view"
 
 const AddressPage = (props) => {
   const { allCards, allArtists } = props.data;
@@ -10,10 +11,12 @@ const AddressPage = (props) => {
   const artistFilter = props.location.state ? props.location.state.artistFilter : null;
   const sort = props.location.state ? props.location.state.sort : null;
 
-  return <MainView allCards={allCards} allArtists={allArtists} selectedAddress={props["*"]} artistFilter={artistFilter} sort={sort} location={props.location} />
+  return <MainView allCards={allCards} allArtists={allArtists} selectedAddress={props.params["*"]} artistFilter={artistFilter} sort={sort} location={props.location} />
 }
 
 export default AddressPage
+
+export const Head = () => <Seo />
 
 export const query = graphql`
   query {

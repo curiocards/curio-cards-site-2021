@@ -12,16 +12,14 @@ import search from "../../images/i-search.svg"
 import { cardImages} from "../constants.jsx";
 import { getCards, getCardIDFromAddress } from "../../services/graph";
 
-import Resolution from "@unstoppabledomains/resolution";
+import { Resolution } from "@unstoppabledomains/resolution";
 const _ = require('lodash');
 
 class Gallery extends React.Component {
   constructor(props) {
     super(props);
 
-    const provider = new ethers.providers.InfuraProvider("homestead", {
-      projectId: process.env.GATSBY_INFURA_API_KEY,
-    });
+    const provider = new ethers.InfuraProvider("mainnet", process.env.GATSBY_INFURA_API_KEY);
 
     this.state = {
       cards: [],
@@ -99,14 +97,21 @@ class Gallery extends React.Component {
         if (!parsedInput) {
           console.debug("parse as UD");
           // detect if unstoppable domain
-          const resolution = Resolution.fromEthersProvider(this.state.provider);
+          const resolution = Resolution.fromEthersProvider({
+            uns: {
+              locations: {
+                Layer1: { network: "mainnet", provider: this.state.provider },
+                Layer2: { network: "polygon-mainnet", provider: new ethers.InfuraProvider("matic", process.env.GATSBY_INFURA_API_KEY) },
+              },
+            },
+          });
           parsedInput = await resolution.addr(inputAddress, "ETH");
           console.debug(`parsedInput: ${parsedInput}`);
         }
       }
 
       // Ensure computed address is valid
-      var result = ethers.utils.getAddress(parsedInput)
+      var result = ethers.getAddress(parsedInput)
     }
     catch (e) {
       console.warn("Unable to parse address");

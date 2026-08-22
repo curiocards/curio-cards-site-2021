@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import Seo from "../../components/seo"
+import { cardImages } from "../../components/constants.jsx"
 import MainView  from "../../views/main-view"
 
 const CardPage = (props) => {
@@ -14,6 +16,17 @@ const CardPage = (props) => {
 }
 
 export default CardPage
+
+export const Head = ({ data, pageContext }) => {
+  const card = data.allCards.nodes.find(c => c.number === Number(pageContext.number))
+  if (!card) return <Seo />
+  return <Seo
+    title={`Curio Cards – ${card.title}`}
+    description={card.description}
+    image={"https://curio.cards" + cardImages[card.number]}
+    canonical={`https://curio.cards/card/${card.number}`}
+  />
+}
 
 export const query = graphql`
   query {

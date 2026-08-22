@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
+import Seo from "../../components/seo"
 import MainView  from "../../views/main-view"
 
 const ArtistPage = (props) => {
@@ -15,6 +16,8 @@ const ArtistPage = (props) => {
 }
 
 export default ArtistPage
+
+export const Head = () => <Seo />
 
 export const query = graphql`
   query {

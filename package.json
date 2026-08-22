@@ -7,6 +7,10 @@
   "keywords": [
     "gatsby"
   ],
+  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -15,18 +19,17 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@unstoppabledomains/resolution": "^8.3.3",
-    "ethers": "^5.4.6",
-    "gatsby": "^3.12.1",
-    "gatsby-plugin-create-client-paths": "^3.13.0",
-    "gatsby-plugin-google-gtag": "^5.13.1",
-    "gatsby-plugin-manifest": "^3.12.0",
-    "gatsby-plugin-react-helmet": "^4.13.0",
-    "gatsby-source-filesystem": "^3.12.0",
-    "gatsby-transformer-json": "^3.12.0",
+    "@unstoppabledomains/resolution": "^9.3.3",
+    "axios": "^1.7.0",
+    "buffer": "^6.0.3",
+    "ethers": "^6.13.0",
+    "gatsby": "^5.16.0",
+    "gatsby-plugin-google-gtag": "^5.16.0",
+    "gatsby-plugin-manifest": "^5.16.0",
+    "gatsby-source-filesystem": "^5.16.0",
+    "gatsby-transformer-json": "^5.16.0",
     "lodash": "^4.17.21",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-helmet": "^6.1.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

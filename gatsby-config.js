@@ -1,10 +1,10 @@
 module.exports = {
+  trailingSlash: "never",
   siteMetadata: {
     siteUrl: "https://curio.cards",
     title: "curio-cards",
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
     "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
@@ -32,10 +32,6 @@ module.exports = {
         display: `standalone`,
         icon: `src/images/favicon.png`,
       },
-    },
-    {
-      resolve: `gatsby-plugin-create-client-paths`,
-      options: { prefixes: [`/address/*`] },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
