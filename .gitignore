@@ -26,8 +26,14 @@ build/Release
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
-.yarn
-.yarnrc
+# yarn berry
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 integration-tests/gatsby-cli/execution-folder/*
 *.un~
 dist
