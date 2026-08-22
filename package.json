@@ -21,6 +21,7 @@
   "dependencies": {
     "@unstoppabledomains/resolution": "^9.3.3",
     "axios": "^1.7.0",
+    "buffer": "^6.0.3",
     "ethers": "^6.13.0",
     "gatsby": "^5.16.0",
     "gatsby-plugin-google-gtag": "^5.16.0",

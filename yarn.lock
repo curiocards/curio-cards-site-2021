@@ -5568,6 +5568,7 @@ __metadata:
   dependencies:
     "@unstoppabledomains/resolution": "npm:^9.3.3"
     axios: "npm:^1.7.0"
+    buffer: "npm:^6.0.3"
     ethers: "npm:^6.13.0"
     gatsby: "npm:^5.16.0"
     gatsby-plugin-google-gtag: "npm:^5.16.0"
